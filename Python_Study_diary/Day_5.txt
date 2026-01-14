@@ -1,0 +1,81 @@
+2025年7月3日 学习日志
+------------
+
+class Pet:
+    def__init__(self, name):#调用构造函数
+        self.__sName = name# 将参数name赋值给实例的私有属性__sName
+
+    def getName(self):
+        return self.__sName
+
+class Rabbit(Pet):
+    def __init__(self, name):
+        Pet.__init__(self, name)    ###调用父类初始化，使对象状态更加完整，下面的子类同理    
+    def speak(self):
+        print(f"Hello from rabbit {self.getName()}.")
+
+    def eat(self, iWeight):
+        print(f"Rabbit {self.getName()} ate {iWeight} gram's food.")
+
+class Cat(Pet):
+    def __init__(self, name):
+        Pet.__init__(self, name)
+
+    def eat(self, iWeight):
+        print(f"Cat {self.getName()} ate {iWeight} gram's food.")
+
+class DragonLi(Cat):
+    def __init__(self, name):
+        Cat.__init__(self, name)
+
+    def speak(self):
+        print(f"Hello from dragonli cat {self.getName()}.")
+
+class Persian(Cat):
+    def __init__(self, name):
+        Cat.__init__(self, name)
+
+    def speak(self):
+        print(f"Hello from persian cat {self.getName()}.")
+
+print("-------------Rabbit Charlie--------------")
+r = Rabbit("Charlie")
+r.eat(100)
+r.speak()  
+
+print("-------------Cat Lucy--------------")
+c1 = DragonLi("Lucy")
+c1.eat(200)
+c1.speak()
+
+print("-------------Cat Eddie--------------")
+c2 = Persian("Eddie")
+c2.eat(100)
+c2.speak()
+
+------------
+
+class Vector3D:
+    def __init__(self, x, y, z):
+        self.x, self.y, self.z = x, y, z
+
+    def __str__(self):
+        return f"({self.x}, {self.y}, {self.z})"
+
+    def __add__(self, v):
+        return Vector3D(self.x + v.x, self.y + v.y, self.z + v.z)
+
+    def __sub__(self, v):
+        return Vector3D(self.x - v.x, self.y - v.y, self.z - v.z)
+
+    def length(self):
+        return (self.x**2 + self.y**2 + self.z**2) ** 0.5
+
+v1 = Vector3D(1, 2, 3)
+v2 = Vector3D(4, 5, 6)
+v3 = v1 + v2
+v4 = v2 - v1
+print("v1 =", v1)
+print("Length of v1 = %.4f" % v1.length())
+print(f"{v1}+{v2}={v3}")
+print(f"{v2}-{v1}={v4}")

@@ -1,0 +1,155 @@
+2025年7月1日 学习日志
+------------
+
+我服了，vscode安装第三方模块弄了半天也不知道怎么搞，哎
+
+解决了，把配置环境换成anaconda就好了，里面什么第三方模块都装好了，我之前一直用的是在vscode里面下的Python包
+
+------------
+
+###range()函数
+
+range(a,b)包含a但不包含b，俗称左闭右开
+
+------------
+
+###字典
+
+在 Python 中，字典（Dictionary） 是一种无序、可变且键唯一的数据结构，用于存储键值对（key-value pairs）。字典通过哈希表实现，支持高效的键值查找、插入和删除操作。以下是关于字典的详细介绍：
+
+1. 字典的基本定义与特性
+定义方式
+### 方式 1：使用花括号 {}
+empty_dict = {}  # 空字典
+person = {"name": "Alice", "age": 30, "city": "New York"}
+
+# 方式 2：使用 dict() 构造函数
+point = dict(x=1, y=2)  # 等价于 {"x": 1, "y": 2}
+
+# 方式 3：嵌套字典
+student = {
+    "id": 1001,
+    "info": {"name": "Bob", "age": 20},
+    "scores": [85, 90, 78]
+}
+
+特性
+键必须唯一：若重复赋值，后值覆盖前值
+d = {"a": 1, "a": 2}  # 最终 d 为 {"a": 2}
+
+键必须可哈希：常见的可哈希类型包括 不可变对象（如字符串、数字、元组），而列表、集合等可变对象不可作为键。
+
+值可以是任意类型：包括列表、字典、函数等。
+
+2. 字典的基本操作
+访问值
+person = {"name": "Alice", "age": 30}
+
+# 方式 1：使用方括号 []（键不存在时抛出 KeyError）
+print(person["name"])  # 输出：Alice
+
+# 方式 2：使用 get() 方法（键不存在时返回默认值）
+print(person.get("city", "Unknown"))  # 输出：Unknown
+
+修改 / 添加键值对
+person["age"] = 31  # 修改已有键的值
+person["city"] = "Los Angeles"  # 添加新键值对
+
+删除键值对
+# 方式 1：使用 del 语句
+del person["city"]
+
+# 方式 2：使用 pop() 方法（删除并返回指定键的值）
+age = person.pop("age")  # 返回 31，同时从字典中删除 "age"
+
+# 方式 3：清空字典
+person.clear()  # 结果：{}
+
+判断键是否存在
+if "name" in person:
+    print("Name exists")
+
+4. 字典的遍历
+###遍历键
+for key in person:  # 等价于 for key in person.keys():
+    print(key)
+
+###遍历值
+for value in person.values():
+    print(value)
+
+###遍历键值对
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+5. 字典推导式
+###用于快速创建字典，语法类似列表推导式：
+# 示例：生成 {1: 1, 2: 4, 3: 9}
+squares = {x: x**2 for x in range(1, 4)}
+
+# 示例：交换键值
+original = {"a": 1, "b": 2}
+swapped = {v: k for k, v in original.items()}  # {1: "a", 2: "b"}
+
+------------
+
+###.update()函数
+
+在 Python 中，字典的 .update() 方法用于将另一个字典或可迭代的键值对合并到当前字典中。若键已存在，则覆盖其值；若不存在，则添加新键值对。以下是详细介绍：
+
+1. 基本语法
+dict.update(other_dict)  # other_dict 可以是字典或可迭代的键值对
+
+参数：
+可以是字典、包含键值对的可迭代对象（如列表的元组 [(key1, value1), (key2, value2)]），或关键字参数。
+返回值：None（直接修改原字典）。
+
+2. 示例：合并字典
+d1 = {"a": 1, "b": 2}
+d2 = {"b": 3, "c": 4}
+
+d1.update(d2)  # 将 d2 合并到 d1
+print(d1)  # 输出：{'a': 1, 'b': 3, 'c': 4}
+
+3. 支持的参数类型
+（1）字典
+
+d = {"x": 1}
+d.update({"y": 2, "z": 3})  # 传入字典
+print(d)  # 输出：{'x': 1, 'y': 2, 'z': 3}
+
+（2）可迭代的键值对
+
+d = {"x": 1}
+d.update([("y", 2), ("z", 3)])  # 传入列表的元组
+print(d)  # 输出：{'x': 1, 'y': 2, 'z': 3}
+
+# 也可以是集合的元组（无序，但键唯一）
+d.update({("w", 4), ("z", 5)})  # 键 "z" 的值被覆盖为 5
+print(d)  # 输出：{'x': 1, 'y': 2, 'z': 5, 'w': 4}
+
+（3）关键字参数
+
+d = {"x": 1}
+d.update(y=2, z=3)  # 传入关键字参数
+print(d)  # 输出：{'x': 1, 'y': 2, 'z': 3}
+
+注意：关键字参数的键必须是合法的标识符（如 y=2 不能写成 2=y），因此只能用于键为字符串且符合变量命名规则的情况。
+4. 合并多个字典的技巧
+（1）连续使用 .update()
+
+d = {}
+d.update({"a": 1}, {"b": 2})  # 错误！update() 只接受一个参数
+
+# 正确方式：
+d.update({"a": 1})
+d.update({"b": 2})
+print(d)  # 输出：{'a': 1, 'b': 2}
+（2）使用字典解包（Python 3.5+）
+
+d1 = {"a": 1}
+d2 = {"b": 2}
+d3 = {"c": 3}
+
+merged = {**d1, **d2, **d3}  ###创建新字典，不修改原字典
+print(merged)  # 输出：{'a': 1, 'b': 2, 'c': 3}

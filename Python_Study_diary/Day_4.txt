@@ -1,0 +1,47 @@
+2025年7月2日 学习日志
+------------
+
+###在 Python 中，re.findall() 是正则表达式模块 re 的核心函数之一，用于在字符串中查找所有匹配某个模式的子串，并以列表形式返回。以下是详细介绍：
+
+1. 基本语法
+re.findall(pattern, string, flags=0)
+
+参数：
+pattern：正则表达式模式（字符串）。
+string：待匹配的字符串。
+flags（可选）：修饰符，如 re.IGNORECASE（忽略大小写）、re.DOTALL（使 . 匹配包括换行符在内的所有字符）等。
+返回值：
+若模式中无分组（括号），返回所有匹配的子串列表。
+若模式中有分组，返回所有匹配的分组内容的元组列表。
+
+2. 常见用法示例
+
+（1）查找所有数字
+import re
+
+text = "I have 3 apples and 5 bananas."
+numbers = re.findall(r'\d+', text)  # \d+ 匹配一个或多个数字
+print(numbers)  # 输出：['3', '5']
+
+（2）查找所有单词（忽略大小写）
+text = "Hello, World! Python is fun."
+words = re.findall(r'\b[a-zA-Z]+\b', text, re.IGNORECASE)  # \b 表示单词边界
+print(words)  # 输出：['Hello', 'World', 'Python', 'is', 'fun']
+
+（3）提取邮箱地址
+text = "Contact me at alice@example.com or bob@domain.co.uk."
+emails = re.findall(r'\b[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+\b', text)
+print(emails)  # 输出：['alice@example.com', 'bob@domain.co.uk']
+
+3. 分组的影响
+当模式中包含括号 () 时，findall() 会返回分组内容而非完整匹配：
+
+text = "2023-07-01 and 2024-05-15"
+# 模式中用括号分组，仅提取年、月、日
+dates = re.findall(r'(\d{4})-(\d{2})-(\d{2})', text)
+print(dates)  # 输出：[('2023', '07', '01'), ('2024', '05', '15')]
+
+若需同时获取完整匹配和分组内容，可使用非捕获组 (?:...)：
+# 使用非捕获组 (?:...) 包含整个模式，同时保留内部分组
+dates = re.findall(r'(?:(\d{4})-(\d{2})-(\d{2}))', text)
+print(dates)  # 输出同上
