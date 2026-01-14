@@ -16,4 +16,4 @@ tnnd 被这个搞了好久，终于弄好了。Github上的文件大小不能超
 期末周复习看框框老师 [《高等数学(上)》6小时速成课 | 框框老师（突击课，适合高等数学(微积分)期末考试、期中考试、补考、重修、专升本，考试不挂科）](https://www.bilibili.com/video/BV1mN411r7VM/?spm_id_from=333.337.search-card.all.click&vd_source=2d4da08735b60fd1a9e16b2c328e440e)
 
 ## 线性代数
-线代也可以看宋浩老师，比较偏基础，讲的很细致[](https://www.bilibili.com/video/BV1h7pteyEww/?spm_id_from=333.1387.upload.video_card.click&vd_source=2d4da08735b60fd1a9e16b2c328e440e)
+线代也可以看宋浩老师，比较偏基础，讲的很细致[《线性代数》教学视频 2.0版（增加了同济版）](https://www.bilibili.com/video/BV1h7pteyEww/?spm_id_from=333.1387.upload.video_card.click&vd_source=2d4da08735b60fd1a9e16b2c328e440e)

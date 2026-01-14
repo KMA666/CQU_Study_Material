@@ -1,0 +1,216 @@
+\documentclass{mcmthesis}
+% 删除重复的 \usepackage{mcmthesis}
+% 删除冲突的 \usepackage{biblatex}
+
+\mcmsetup{
+    CTeX = true,
+    tcn = 10538,
+    problem = F,
+    sheet = true,
+    titleinsheet = true,
+    keywordsinsheet = true,
+    titlepage = false,
+    abstract = true
+}
+
+% 保留必要包（若需使用palatino字体，可保留并添加 \usepackage{palatino}）
+\usepackage{lipsum}  % 用于生成示例文本
+\usepackage{amsmath} % 用于公式编号、矩阵等环境
+\usepackage{graphicx}% 用于插入图片
+\usepackage{listings}% 用于插入代码（需配合 lstset 配置）
+\usepackage{hyperref}% 用于超链接（mcmthesis可能已包含，重复加载无错）
+\usepackage{tocloft} % 用于目录格式调整（mcmthesis可能已包含，重复加载无错）
+\usepackage{setspace} % 用于行距调整（mcmthesis可能已包含，重复加载无错）
+\usepackage{lastpage} % 用于获取总页数
+\usepackage{fontspec}
+\setmainfont{Times New Roman} % 英文正文主字体
+
+
+% 配置代码 listings 格式（可选，避免代码显示异常）
+\lstset{
+    basicstyle = \small\ttfamily,
+    keywordstyle = \color{blue},
+    commentstyle = \color{gray},
+    stringstyle = \color{green},
+    numbers = left,
+    numberstyle = \tiny\color{gray},
+    frame = tb,
+    tabsize = 4,
+    breaklines = true,
+    breakatwhitespace = false
+}
+
+\title{\textbf{Multi-dimensional Analysis: Identifying the Optimal Selection of Rental and Purchase Plans}}
+% 注释掉引用 mcmthesis-logo 的代码
+% \author{\small \href{http://www.latexstudio.net/}{}} % 保留链接，移除图片
+
+\begin{document}
+\begin{abstract}
+This is the abstract.
+
+\end{abstract}
+\begin{keywords}
+keyword1; keyword2
+\end{keywords}
+
+
+\maketitle
+
+% Summary的字号等最后调整一下，调到14pt，字体视情况是否做出更改
+
+% \\\\\\\\\目录页\\\\\\\\\\
+
+\newpage
+\fancypagestyle{plain}{} % 目录页页眉页码右侧显示
+\renewcommand{\contentsname}{\hfill Contents \hfill}
+\setcounter{tocdepth}{3} % 目录深度到subsubsection
+\begin{spacing}{1.3}
+    \tableofcontents
+\end{spacing}
+\setcounter{page}{2} % 目录页码从3开始
+\newpage
+% \\\\\\\\\正文页\\\\\\\\\\
+
+\section{Introduction}
+\lipsum[2]
+\begin{itemize}
+\item minimizes the discomfort to the hands, or
+\item maximizes the outgoing velocity of the ball.
+\end{itemize}
+We focus exclusively on the second definition.
+
+\begin{itemize}
+\item the initial velocity and rotation of the ball,
+\item the initial velocity and rotation of the bat,
+\item the relative position and orientation of the bat and ball, and
+\item the force over time that the hitter hands applies on the handle.
+\end{itemize}
+\lipsum[3]
+\begin{itemize}
+\item the angular velocity of the bat,
+\item the velocity of the ball, and
+\item the position of impact along the bat.
+\end{itemize}
+\lipsum[4]
+\emph{center of percussion} [Brody 1986], \lipsum[5]
+
+\begin{Theorem} \label{thm:latex}
+\LaTeX
+\end{Theorem}
+\begin{Lemma} \label{thm:tex}
+\TeX .
+\end{Lemma}
+\begin{proof}
+The proof of theorem.
+\end{proof}
+
+\subsection{Other Assumptions}
+\lipsum[6]
+\begin{itemize}
+\item Assumption 1
+\item Assumption 2
+\item Assumption 3
+\item Assumption 4
+\end{itemize}
+\lipsum[7]
+
+\section{Analysis of the Problem}
+% 注释掉整个 figure 环境，因为它包含了 \includegraphics
+% \begin{figure}[h]
+% \small
+% \centering
+% % 替换为实际存在的图片（建议用 pdf/png），若文件不存在可暂时注释
+% \includegraphics[width=12cm]{mcmthesis-aaa.eps}
+% \caption{aa} \label{fig:aa}
+% \end{figure}
+
+\lipsum[8] % 注释掉对图片的引用 \eqref{aa}
+% 添加 \tag{1} 或启用自动编号，使 \eqref{aa} 有效
+\begin{equation}
+a^2 \tag{1} \label{aa}
+\end{equation}
+
+% 修正矩阵环境多余的大括号，调整列数为3列（与内容匹配）
+\[
+\begin{pmatrix}*{3}c
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33} \\
+\end{pmatrix}
+= \frac{\text{Opposite}}{\text{Hypotenuse}} \cos^{-1}\theta \arcsin\theta
+\]
+\lipsum[9]
+
+\[
+p_{j}=
+\begin{cases} 
+0, & \text{if $j$ is odd} \\
+r!\,(-1)^{j/2}, & \text{if $j$ is even}
+\end{cases}
+\]
+\lipsum[10]
+
+\[
+\arcsin\theta =
+\mathop{{\int\!\!\!\!\!\int\!\!\!\!\!\int}\mkern-31.2mu
+\bigodot}\limits_\varphi
+\mathop{\lim}\limits_{x \to \infty} \frac{n!}{r!\left(n - r\right)!}
+\eqno (2)
+\]
+
+% 删除章节标题末尾多余空格
+\section{Calculating and Simplifying the Model}
+\lipsum[11]
+
+\section{The Model Results}
+\lipsum[6]
+
+\section{Validating the Model}
+\lipsum[9]
+
+\section{Conclusions}
+\lipsum[6]
+
+\section{A Summary}
+\lipsum[6]
+
+% 修正拼写错误（Evaluate of the Mode → Evaluation of the Model）
+\section{Evaluation of the Model}
+
+\section{Strengths and Weaknesses}
+\lipsum[12]
+
+\subsection{Strengths}
+\begin{itemize}
+\item \textbf{Applies widely}\\
+This system can be used for many types of airplanes, and it also solves the interference during the procedure of boarding airplanes. As described above, we can optimize the boarding time. All services are automated.
+\item \textbf{Improve the quality of airport service}\\
+Balancing costs and benefits, it brings more convenience to airports and passengers, and saves human resources for airlines.
+\item \textbf{High reliability}\\
+The model is validated through multiple scenarios, ensuring stable performance in practical applications.
+\end{itemize}
+
+% 传统参考文献环境（与 mcmthesis 兼容）
+\begin{thebibliography}{99}
+\bibitem{1} D.~E. Knuth. \textit{The \TeX{}book}. American Mathematical Society and Addison-Wesley Publishing Company, 1984-1986.
+\bibitem{2} Leslie Lamport. \textit{\LaTeX{}: A Document Preparation System}. Addison-Wesley Publishing Company, 1986.
+\bibitem{3} \url{http://www.latexstudio.net/}
+\bibitem{4} \url{http://www.chinatex.org/}
+\end{thebibliography}
+
+\begin{appendices}
+\section{First Appendix}
+\lipsum[13]
+Here are the simulation programs used in our model:
+
+\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Matlab Source Code:}}
+% 确保 code 目录存在且文件可读，否则注释该行
+% \lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
+
+\section{Second Appendix}
+Some more text. \textbf{\textcolor[rgb]{0.98,0.00,0.00}{C++ Source Code:}}
+% 确保 code 目录存在且文件可读，否则注释该行
+% \lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
+
+\end{appendices}
+\end{document}

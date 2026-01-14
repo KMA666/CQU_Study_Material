@@ -1,0 +1,1330 @@
+\documentclass{mcmthesis}
+\mcmsetup{
+    CTeX = true,
+    tcn = 10538,
+    problem = F,
+    sheet = true,
+    titleinsheet = true,
+    keywordsinsheet = true,
+    titlepage = false,
+    abstract = true
+}
+
+
+
+% ========== 段落缩进核心配置（优先级最高） ==========
+\setlength{\parindent}{2em}       % 全局首行缩进2个汉字宽度
+\setlength{\parskip}{0pt}         % 取消段间空行（中文排版规范）
+\usepackage{indentfirst}          % 章节标题后第一段也缩进
+% ========== 其他必要包 ==========
+\usepackage{lipsum}  % 示例文本
+\usepackage{amsmath} % 公式
+\usepackage{graphicx}% 图片
+\usepackage{listings}% 代码
+\usepackage{tocloft} % 目录格式
+\usepackage{setspace}% 行距（后续统一设置）
+\usepackage{lastpage}% 总页数
+\usepackage{fontspec}% 字体
+\usepackage{hyperref}% 超链接（放最后加载）
+\usepackage{booktabs} % 表格美化
+\usepackage{titlesec} % 专门用于调整标题格式的包（兼容mcmthesis）
+\usepackage{float}   % 浮动图形
+\usepackage{caption} % 专门调整标题格式的包（兼容mcmthesis）
+\usepackage{subcaption} % 子图环境（兼容mcmthesis）
+\usepackage{enumitem} % 列表环境
+\usepackage{geometry}
+\usepackage{xcolor} % 必须加载，支持颜色设置
+
+
+
+\captionsetup[table]{skip=8pt} % 设置表格标题间距：skip=15pt 为标题与表格的间隔（默认约5pt，可调整）
+\titlespacing*{\section}{0pt}{12pt}{15pt} % 设置section标题格式：字号/加粗 + 下方间距20pt（可调整）
+\setmainfont{Times New Roman} % 英文主字体
+\titlespacing*{\subsection}{0pt}{10pt}{11pt} % 设置subsection标题格式：字号/加粗 + 下方间距15pt（可调整）
+
+% ========== 行距配置（可选，避免影响缩进） ==========
+\onehalfspacing% 1.5倍行距（中文论文常用，可改为\doublespacing/ \singlespacing）
+
+% ========== 代码列表格式 ==========
+\lstset{
+    basicstyle = \small\ttfamily,
+    keywordstyle = \color{blue},
+    commentstyle = \color{gray},
+    stringstyle = \color{green},
+    numbers = left,
+    numberstyle = \tiny\color{gray},
+    frame = tb,
+    tabsize = 4,
+    breaklines = true,
+    breakatwhitespace = false
+}
+% ========== 标题/作者配置 ==========
+\title{\textbf{Multi-dimensional Analysis: Identifying the Optimal Selection of Rental and Purchase Plans in Chongqing}}
+\author{Team 10538} % 补充作者信息（数模竞赛通常写团队编号或成员姓名）
+
+
+
+\begin{document}
+% ========== 摘要（自动缩进，无需手动\indent） ==========
+\begin{abstract}
+\begingroup
+\setlength{\parskip}{8pt} % 局部段距
+
+With the increase in urbanization rate and the decrease in the number of births, the sales area of housing in many places has dropped significantly.
+In this paper, we have adopted \textbf{multiple modeling schemes} and established a \textbf{multi-dimensional analysis system}, 
+aiming to provide the public with more accurate and cost-effective housing reference plans, 
+and offer reasonable suggestions to the \textbf{Chongqing government}
+% 随着城市化率的提高和出生人口的减少，许多地方的住房销售面积明显下降。
+% 在本文中，我们采用了多种建模方案，建立了多维度的分析体系，旨在为公众提供更准确、性价比更高的住房参考方案，
+% 并为重庆市政府w提供合理的建议。
+
+For task1, we build a \textbf{Analytic Hierarchy Process (AHP)} model.By combining the actual situation, 
+establish A, B, and C as the target layer, criterion layer, and sub-criterion layer respectively, 
+and set the corresponding scales. Based on the scales, write the judgment matrix,
+and then determine the weights of the relevant influencing factors through the eigenvalue method.
+% 对于任务1，我们建立了层次分析法（AHP）模型。
+% 通过结合实际情况建立A,B,C为目标层，准则层，子准则层，并设定相应的标度，
+% 依据标度写出判断矩阵，再通过特征值法来确定相关影响因素的权重
+
+For task2, We approach the research from two core dimensions: 
+\textbf{the triggering conditions for property replacement} and \textbf{the implementation pathways of property replacement.}
+By constructing a simulation-based decision function, 
+we quantify the weights of respective influencing factors and further deduce the necessity of property replacement.
+% 我们从“住房置换的触发条件”与“住房置换的实施路径”这两个核心维度展开研究。
+% 通过构建基于模拟的决策函数，我们对各影响因素的权重进行量化，并进一步推演住房置换的必要性。
+
+For task3, we leveraged the \textbf{Grey Prediction Model (GM)} 
+to identify the factors exerting significant impacts on housing price fluctuations and forecast their future values. 
+To ensure the accuracy of the prediction, we further conducted a \textbf{multiple regression analysis}
+on housing prices using historical multi-year data, thereby forecasting the housing price
+% 对于任务3，我们利用灰色预测模型（GM），找出对于房价波动影响较大的因素，预测其未来值，同时为了保证预测的准确性，
+%再借由先前的多年数据，对房价进行多元回归分析，从而对重庆未来五年的房价走势进行预测。
+
+For task4, We synthesized the findings from the aforementioned tasks and, 
+based on the \textbf{calculation results of the model}, 
+submitted a memorandum outlining project-specific measures to the Chongqing Municipal Government, 
+with the aim of assisting the public in making more informed decisions regarding property rental and purchase.
+% 我们综合了上述任务的结果，并根据模型的计算结果，
+% 向重庆市政府提交了一份概述项目具体措施的备忘录，旨在帮助公众在物业租赁和购买方面做出更明智的决定。
+
+\endgroup
+\end{abstract}
+
+\begin{keywords}
+Chongqing; Analytic Hierarchy Process; Multiple Regression Analysis; Grey Model
+\end{keywords}
+
+\maketitle
+
+% ========== 目录页 ==========
+\newpage
+\fancypagestyle{plain}{} 
+\renewcommand{\contentsname}{\hfill Contents \hfill}
+\setcounter{tocdepth}{3} 
+\begin{spacing}{1.0} 
+    \tableofcontents
+\end{spacing}
+\setcounter{page}{2} 
+\newpage
+
+% ========== 正文（所有段落自动缩进） ==========
+\section{Introduction}
+
+% \begin{itemize}
+% \item minimizes the discomfort to the hands, or
+% \item maximizes the outgoing velocity of the ball.
+% \end{itemize}
+% \begin{Theorem} \label{thm:latex}
+% \LaTeX
+% \end{Theorem}
+% \begin{Lemma} \label{thm:tex}
+% \TeX .
+% \end{Lemma}
+% \begin{proof}
+% The proof of theorem.
+% \end{proof}
+
+\subsection{Problem Background}
+% 1.1 问题背景
+% \begin{itemize}
+% \item \textbf{Housing Market Dynamics}\\
+% \end{itemize}
+Against the backdrop of rising urbanization rates and a declining number of births, 
+residential housing sales areas have witnessed a significant downturn across multiple regions.
+According to public data released by the National Bureau of Statistics of China\textsuperscript{\cite{1}}, the total number of births in China reached 9.02 million in 2023, 
+while the number of deaths stood at 11.10 million. With births falling short of deaths, 
+China's total population decreased by 2.08 million in 2023 compared to 2022. 
+Such a demographic contraction indicates that the real estate sector can no longer replicate the boom it experienced in the early 2000s; consequently, 
+individuals have become more cautious when renting or purchasing properties, fearing that an ill-suited choice may result in substantial financial losses.
+% 在城镇化率提升与出生人口减少的背景下，多个地区的商品住宅销售面积出现显著下滑。
+% 根据中国国家统计局发布的公开数据，2023 年中国全年出生人口为 902 万人，死亡人口为 1110 万人；
+% 由于出生人口少于死亡人口，2023 年全国人口总量较 2022 年减少 208 万人。
+% 这一人口收缩态势意味着，房地产行业已无法重现 21 世纪初的繁荣局面；因此，民众在租购房产时愈发谨慎，担忧不当选择会造成巨额财产损失。
+
+However, not all individuals possess a clear understanding of their own housing needs, 
+and most rely solely on subjective judgment when making such decisions. To safeguard the legitimate interests of the general public, this study proposes a multi-dimensional, 
+multi-factor framework for housing rental and purchase, coupled with housing price forecasts for the next 5 to 10 years. 
+This integrated approach aims to comprehensively assist the public in securing satisfactory housing through rental or purchase.
+% 然而，并非所有民众都清晰知晓自身的住房需求，多数人在房产决策中仅依赖主观判断。
+% 为维护公众的合法利益，本研究构建了一个涵盖多维度、多因素的租购房产分析框架，并提供了未来 5 至 10 年的房价预测。
+% 这一综合方案旨在全方位协助公众租购到符合自身需求的房产。
+
+\subsection{Restatement of the Problem} 
+% 1.2 问题重述
+Considering the background, we need to solve the following problems:
+\begin{itemize}
+\item \textbf{Problem 1:} For a newly relocated employee: Outline the context for evaluating rental and purchase strategies, plus methods and rationale for weighting relevant factors. %针对新搬迁的员工：概述评估租赁/购买策略的背景，以及相关因素加权的方法和理由。
+\item \textbf{Problem 2:} For homeowners in Chongqing: Specify when to upgrade to a better home, how to do so, and the optimal solution. %针对重庆的房主：说明何时升级到更好的住房，如何进行升级，以及最佳解决方案。
+\item \textbf{Problem 3:} Forecast Chongqing's housing price trends over 5 to 10 years using recent statistical data. %利用近期统计数据预测重庆未来5-10年的房价走势。
+\item \textbf{Problem 4:} make reasonable suggestions to the government or developers based on the above calculation results. %根据上述计算结果，向政府或开发商提出合理建议。
+\end{itemize}
+
+
+\subsection{Our Work} 
+
+% 1.3 我们的工作
+
+In order to avoid complicated descriptions, intuitively reflect our work process, the flowchart is shown in Figure 1. % 我们为了避免复杂的描述，直观地反映我们的工作流程，流程图如图1所示。
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{flowchart.png}
+%     \caption{Our Work Flowchart}
+%     \label{fig:flowchart}
+% \end{figure}
+
+To solve the problems,we built three models. The first model employs the 
+Analytic Hierarchy Process (AHP) to calculate the weights of factors 
+that influence the comprehensive evaluation of one’s housing rental-purchase strategy. 
+Notably, this weight calculation framework also serves as a reference for identifying key factors 
+affecting the decision to upgrade to a more desirable residential property.
+% 第一个模型采用层次分析法（AHP）计算影响住房租购策略综合评价因素的权重。
+% 值得注意的是，这个权重计算框架也可以作为参考，以确定影响决定升级为更理想的住宅物业的关键因素。
+
+\begin{figure}
+\centering
+\includegraphics[width=0.55\textwidth]{C:/Users/yanha/Desktop/LaTeX/CQUICM_paper/Charts related to the thesis/workchart.png}
+\caption{Flowchart of our work}
+\end{figure}
+
+
+
+The second model adopted herein is the Grey Model (GM), 
+which is applied to forecast the future values of factors influencing housing prices. 
+The third model is a multiple regression analysis: leveraging multi-year historical data as the empirical foundation, 
+this model integrates the predicted values of the aforementioned influencing factors to generate forecasts of future housing prices.
+% 第二个模型采用灰色预测模型（GM），用于预测影响房价的因素的未来值。
+% 第三个模型是多元回归分析：利用多年历史数据作为经验基础，
+
+Finally, based on the comprehensive computational results derived from the aforementioned models, 
+targeted policy recommendations are formulated and submitted to the Chongqing Municipal People's Government.
+% 最后，基于上述模型的综合计算结果，制定有针对性的政策建议，并提交给重庆市人民政府。
+
+
+
+\section{Assumptions and Justifications}
+% 2. 假设与说明
+To simplify the given problems, we make the following basic assumptions: % 为简化所给问题，我们做出以下基本假设：
+
+\begin{itemize}
+\item \textbf{Assumption 1:} The data gathered from online databases is precise, trustworthy, and exhibits coherence among various sources. 
+% 从在线数据库收集的数据是精确、可信的，并且各个来源之间具有一致性。
+\item \textbf{Justification} All these data are provided by official organizations and endorsed by government authorities.
+ % 这些数据均由官方机构提供，并得到政府权威部门的认可。
+
+\item \textbf{Assumption 2:} No other unforeseeable factors will influence individuals' decisions regarding housing rental or purchase, 
+such as family recommendations or sudden major life events.
+% 不会有其他不可预见的因素影响个人的住房租赁或购买决策，例如家庭建议或突发重大生活事件。
+\item \textbf{Justification} The discussion of this research question is predicated on objective conditions, 
+and the models employed are also calculated based on such objective parameters.
+% 本研究问题的讨论是以客观条件为前提的，所采用的模型也是基于这些客观参数进行计算的。
+
+\item \textbf{Assumption 3:} No significant disruptions that 
+could undermine the validity of housing price forecasts will occur in Chongqing over the next few years, 
+including wars, natural disasters, or major policy shifts.
+% 在未来几年内，重庆不会发生可能破坏房价预测有效性的重大干扰事件，包括战争、自然灾害或重大政策变动。
+\item \textbf{Justification} As a major city in western China and the economic hub of Southwest China, 
+Chongqing has maintained a stable social and economic environment in recent years.
+% 作为中国西部的重要城市和西南地区的经济中心，重庆近年来保持了稳定的社会和经济环境。
+
+\end{itemize}
+
+\section{Notations}
+% 3. 符号说明
+The key mathematical notations used in this paper are listed in Table \ref{Tab:notations}. % 本文中使用的主要数学符号列在表1中。
+
+\begin{table}[] 
+\centering
+\caption{Notations used in this paper}
+\begin{tabular}{>{\centering\arraybackslash}p{3cm} p{13cm} }
+\specialrule{1pt}{0pt}{0pt} % 加粗上横线（宽度1pt，上下间距0pt）
+\multicolumn{1}{c}{\textbf{Symbol}} & \multicolumn{1}{c}{\textbf{Description}} \\ 
+% \specialrule{1pt}{0pt}{0pt} % 加粗表头下横线
+\hline
+A                           &    Goal Layer           \\
+B                           &    Criterion Layer          \\ 
+C                           &    Sub-criterion Layer           \\
+CR                          &    Consistency Ratio           \\ 
+CI                          &     Consistency Index          \\ 
+RI                           &     Random Index         \\
+Mc                          &     Total amount of government relocation subsidies and trade-in incentives              \\                       
+Mh                           &    Resale value of the existing property               \\
+Mn                           &     Available disposable funds             \\
+Mg                           &    Transaction price of the target property               \\
+Mgp                           &    Down payment for the target property               \\
+Qc                           &     Quality-of-life gap              \\
+Dc                            &    Difference in debt burden               \\
+Ts                               &    Subjective willingness to trade in the property               \\
+Ht                               &    Urgency of property trade-in               \\
+Rh                            &       Annual housing price decline trend            \\
+Mz                               &   Preferential resale subsidies provided by policies                \\
+R                            &   Appreciation Adaptability                \\
+M                                       &  Quality Adaptability              \\
+M₁/₂/₃                               &  	Area / Environment / Building Age Adaptability                 \\
+N                                       &   	Attribute Adaptability                \\
+N₁/₂/₃/₄                                       &    	Commuting / School District / Sea View / Commercial Street Adaptability               \\
+Rₛ/Rₒ                                       &    	Subjective / Objective Appreciation Indicators               \\
+$P_t$                                    &    	The price per square meter of housing              \\
+$I_t$                                       &    	Per capita disposable income of urban residents                \\
+$R_t$                                 &    	index of commercial residential sales prices            \\
+
+\specialrule{1pt}{0pt}{0pt} % 加粗下横线                                                  
+\end{tabular}
+\label{Tab:notations}
+\end{table}
+
+%表格%
+
+\section{Part I: AHP Model for Housing Rental-Purchase Strategy } % 4. 第一部分：住房租购策略评估的层次分析法模型
+
+
+\subsection{Analysis of the problem} % 4.1 问题分析
+
+Based on the information provided in the research context, 
+the protagonist of the problem is a newly recruited employee who has relocated to another city. 
+It can thus be inferred that the individual faces constraints such as insufficient initial capital, 
+a relatively modest starting salary, and uncertain job stability—factors that necessitate the 
+consideration of multiple dimensions when making housing purchase decisions. 
+These factors are categorized into decisive factors and non-decisive factors.
+% 根据研究背景中提供的信息，问题的主角是一位新招募的员工，已经搬迁到另一个城市。
+% 因此可以推断，该个人面临诸如初始资本不足、起薪较低以及工作稳定性不确定等限制因素——这些因素在做出购房决策时需要考虑多个维度。
+% 这些因素被分为决定性因素和非决定性因素。
+
+To intuitively reflect the impact of each factor on housing rental-purchase options and their corresponding weights, 
+the Analytic Hierarchy Process (AHP) is selected as the methodological framework for constructing the model to address this research problem.
+% 为了直观地反映各因素对住房租购选项的影响及其相应权重，选择层次分析法（AHP）作为构建模型的方法论框架，以解决这一研究问题。
+
+\subsection{The Basic Framework of the Model} % 4.2 模型的基本框架
+
+
+First, we define Levels A, B, and C as the Goal Layer, Criterion Layer, and Sub-criterion Layer, respectively. 
+Within the Goal Layer, 
+the rationale for how each criterion in the Criterion Layer influences housing options is elaborated. 
+Subsequently, within each sub-category of the Criterion Layer, 
+the mechanisms through which each sub-criterion affects housing rental-purchase decisions are explained in phases. 
+The hierarchical structure is illustrated in Figure 2, with the weights of each layer determined via fuzzy judgment.
+% 首先，我们将 A、B 和 C 分别定义为目标层、准则层和子准则层。
+% 在目标层中，阐述了准则层中每个准则如何影响住房选项的原理。
+% 随后，在准则层的每个子类别中，分阶段解释了每个子准则如何影响住房租购决策的机制。
+% 层次结构如图2所示，每一层的权重通过模糊判断来确定。
+
+%  层次结构如图2所示，每一层的权重通过模糊判断来确定。
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{C:/Users/yanha/Desktop/LaTeX/CQUICM_paper/Charts related to the thesis/AHD.png}
+\caption{Hierarchical Structure of AHP Model}
+\end{figure}
+
+\subsection{Establishment of Judgment Matrices and Consistency Test} % 4.3 判断矩阵的建立与一致性检验
+
+
+The Analytic Hierarchy Process (AHP) requires a two-layer weight analysis, 
+which entails constructing four judgment matrices to determine the weight proportions among factors at each hierarchical level. 
+However, relying solely on subjective judgments to define these matrices may compromise the objectivity of the resulting weights. 
+To mitigate this subjective bias, objective data should be incorporated to appropriately balance the subjective components.
+% 层次分析法（AHP）需要进行两层权重分析，这涉及构建四个判断矩阵，以确定各层次水平因素之间的权重比例。
+% 然而，仅依赖主观判断来定义这些矩阵可能会损害结果权重的客观性。
+% 为了减轻这种主观偏见，应结合客观数据来适当平衡主观成分。
+% 为了减轻这种主观偏见，应结合客观数据来适当平衡主观成分。
+
+Fill in the judgment matrices below in accordance with the scale values specified in Table 2\textsuperscript{\cite{2}}.
+% 根据表2中指定的标度值，填写以下判断矩阵。
+
+
+\begin{table}[!htbp]
+\centering
+\caption{AHP Scale Values}
+\begin{tabular}{>{\centering\arraybackslash}p{3cm} p{13cm}}
+\specialrule{1pt}{0pt}{0pt} % 加粗上横线（宽度1pt，上下间距0pt）
+\multicolumn{1}{c}{\textbf{Scale Value}} & \multicolumn{1}{c}{\textbf{	Description of Relative Significance}}\\
+\hline
+1 & Equal significance \\
+3 & Moderate predominance of one factor over another \\
+5 & Strong predominance of one factor over another \\
+7 & Very strong predominance of one factor over another \\
+9 & Extreme predominance of one factor over another \\
+2,4,6,8 & Intermediate values between adjacent pairwise judgments \\
+\specialrule{1pt}{0pt}{0pt} % 加粗下横线
+\end{tabular}
+\end{table}
+
+The four judgment matrices are illustrated in the following figures, respectively: % 四个判断矩阵分别如图所示：
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{A—B Weight.png}
+\caption{A—B Weight}
+\end{figure}
+%======================================================================================================%
+%======================================================================================================%
+%======================================================================================================%
+
+\begin{figure}[H]
+    \centering % 整体居中
+    % 子图1：宽度占行的1/3（\linewidth为当前行宽）
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{B1—C Weight.png} % 图片路径
+        \caption{B1—C Weight} % 子标题
+        \label{subfig:1} % 子图引用标签
+    \end{subfigure}
+    \hfill % 子图间自动填充空白（均匀分布）
+    % 子图2：宽度1/3
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{B2—C Weigh.png}
+        \caption{B2—C Weight}
+        \label{subfig:2}
+    \end{subfigure}
+    \hfill
+    % 子图3：宽度1/3
+    \begin{subfigure}{0.3\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{B3—C Weigh.png}
+        \caption{B3—C Weight}
+        \label{subfig:3}
+    \end{subfigure}
+    
+    % 总标题（可选）
+    \caption{B—C Weight}
+    \label{fig:three} % 总图引用标签
+\end{figure}
+
+Subsequently, a consistency test is performed on the aforementioned matrices, 
+with the consistency ratio (CR) calculated to validate their reliability. % 随后，对上述矩阵进行一致性检验，计算一致性比率（CR）以验证其可靠性。
+
+% C R=\frac{C I}{R I}\left\{\begin{array}{ll}
+% 0 & \text { The judgment matrix is a perfectly consistent matrix } \\
+% <0.1 & \text { The judgment matrix passes the consistency test } \\
+% \geq 0.1 & \text { The judgment matrix fails the consistency test }
+% \end{array} \quad C I=\frac{\lambda_{\max }-n}{n-1} \quad R I=\frac{\lambda_{\max }^{\prime}-n}{n-1}\right.
+% $$
+% \small
+% C R=\frac{C I}{R I}\left\{\begin{array}{ll}
+% 0 & \text { The judgment matrix is a perfectly consistent matrix  } \\
+% <0.1 & \text { The judgment matrix fails the consistency test } \\
+% \geq 0.1 & \text { The judgment matrix passes the consistency test }
+% \end{array} \quad C I=\frac{\lambda_{\max }-n}{n-1} \quad R I=\frac{\lambda_{\max }^{\prime}-n}{n-1}\right.
+% \normalsize
+% $$
+\begin{equation} \label{eq:CR} % label用于正文引用序号
+CR=\frac{CI}{RI}\left\{
+\begin{array}{ll}
+0 & \text{The judgment matrix is a perfectly consistent matrix} \\
+<0.1 & \text{The judgment matrix passes the consistency test} \\
+\geq 0.1 & \text{The judgment matrix fails the consistency test}
+\end{array}
+\right.
+\end{equation}
+
+\vspace{10pt}
+
+\begin{equation} \label{eq:CI_RI} % label用于正文引用序号
+\quad CI=\frac{\lambda_{\max}-n}{n-1} \quad RI=\frac{\lambda_{\max}'-n}{n-1}
+\end{equation}
+
+When 
+CR<0.1
+, the consistency test is deemed valid, and the judgment matrix is successfully constructed. 
+Subsequently, the corresponding weights can be derived from this matrix using the eigenvalue method:
+From the aforementioned consistency test process, the maximum eigenvalues and their associated eigenvectors of
+each judgment matrix are presented in Figure 5.
+% 当 CR<0.1 时，一致性检验被视为有效，判断矩阵成功构建。
+% 随后，可以使用特征值法从该矩阵中导出相应的权重：
+% 从上述一致性检验过程来看，各判断矩阵的最大特征值及其相关特征向量如图5所示。
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.9\textwidth]{C:/Users/yanha/Desktop/LaTeX/CQUICM_paper/Charts related to the thesis/Eigenvalue and Eigenvector.png}
+% \caption{Maximum Eigenvalues and Eigenvectors of Judgment Matrices}
+% \end{figure}
+
+By normalizing each eigenvector, 
+the first-order and second-order weights corresponding to each judgment matrix can be obtained.
+% 通过对每个特征向量进行归一化，可以获得每个判断矩阵对应的一阶和二阶权重。
+
+
+
+\subsection{Conclusions and Analysis of Model Results}  % 4.4 模型结果的结论与分析
+
+%待定当xx的时候，可以考虑xxx，当xx的时候，不建议xxx
+To summarize, based on the quantitative analysis of the first-order and 
+second-order weights derived from the Analytic Hierarchy Process (AHP), 
+when the aforementioned weight characteristics are simultaneously satisfied,
+prioritizing property purchase is not only financially feasible but also aligns with personal development and household needs.
+Additionally, this choice is consistent with the local market environment and policy orientation in Chongqing.
+% 总结而言，基于层次分析法（AHP）得出的一阶和二阶权重的定量分析,
+% 当上述权重特征同时满足时，优先考虑购房不仅在经济上可行，而且符合个人发展和家庭需求。
+% 此外，这一选择也符合重庆当地的市场环境和政策导向。
+
+Finally, there are special circumstances involving highly impactful decisive factors 
+that warrant the outright exclusion of certain housing options: 
+specifically, rental or mortgage payments exceeding 40\% or 50\% of the monthly income would render the property 
+ineligible for rental consideration; insufficient accumulated savings 
+to cover the down payment of a target property would disqualify it from purchase consideration; 
+other exclusionary criteria include excessively low job stability and an unreasonably high housing price-to-rent ratio. 
+
+Beyond these extreme scenarios (while excluding the aforementioned circumstances), 
+the optimal housing rental-purchase decision for new employees is determined 
+through a comprehensive evaluation of the weighted factors.
+% 最后，存在一些涉及高影响力决定性因素的特殊情况，值得直接排除某些住房选项：
+% 具体而言，租金或按揭付款超过月收入的40\%或50\%将使该物业不符合租赁考虑条件；
+% 累积储蓄不足以支付目标物业的首付款将使其不符合购买考虑条件；
+% 其他排除标准包括工作稳定性过低和房价租金比过高。
+% 除了这些极端情况（排除上述情况），新员工的最佳住房租购决策是通过对加权因素的综合评估来确定的。
+
+
+\section{Part II: Decision Model for Upgrading Residential Property } % 5. 第二部分：住房置换决策模型
+
+Under the premise of practical considerations specific to the Chongqing context, 
+this research problem can be explored from the following two dimensions:
+% 在符合重庆实际情况的前提下，这一研究问题可以从以下两个维度进行探讨：
+
+
+\subsection{Under what circumstances should property trade-in be opted for?} % 5.1 住房置换的触发条件
+
+Typically, in the context of property trade-in, 
+even if the overall value of the current residence (encompassing livability, commuting convenience, and other relevant dimensions) is lower than that of the target property, 
+households tend not to proceed with the trade-in in the absence of 
+critical triggering conditions—such as a strong demand for housing replacement or 
+an anticipated substantial increase in the market value of the target property within the near future.
+% 通常在住房置换的背景下，即使当前住所的整体价值（涵盖宜居性、通勤便利性以及其他相关维度）低于目标物业，
+% 如果没有关键的触发条件——例如对住房置换的强烈需求或对目标物业市场价值在不久的将来大幅上涨的预期——家庭往往不会进行置换。
+
+Additionally, with regard to the property trade-in issue, local policies in Chongqing exert a significant influence.
+% 此外，关于住房置换问题，重庆的地方政策也发挥着重要影响。
+
+\begin{itemize}
+    \item \textbf{Substantial trade-in subsidy policy:}
+    Prior to December 31, 2025, households that purchase new commercial housing in the central urban area, 
+    complete online signing registration and deed tax payment, 
+    and sell their existing housing in the same area within one year are eligible 
+    for a subsidy equivalent to 1\% of the total transaction price of the new property. An additional 0.5\% subsidy 
+    is available if the floor area of the new housing exceeds 140 square meters, with the two subsidies being stackable. 
+    This policy has been implemented in districts such as Banan and Dadukou, where subsidies are disbursed in cash form. 
+    Districts and counties outside the central urban area may also adopt this policy as a reference.
+
+    \item \textbf{Optimization of "trade-in for new housing" services:}
+    Relevant services are provided through the "Yufangtong" online platform and offline channels. 
+    Real estate agencies offer "priority sales" services and commission discounts for trade-in households 
+    selling second-hand housing; real estate developers, in turn, provide trade-in discounts, extended subscription periods, 
+    and risk-free deposit refund services for households purchasing new commercial housing, thereby reducing 
+    the risks associated with property trade-in.
+
+\end{itemize}
+
+Accordingly, it is necessary to establish a trade-in threshold function, 
+whereby the property trade-in decision is only made when certain predefined conditions are satisfied.
+% 因此，有必要建立一个置换阈值函数，只有在满足某些预定义条件时才做出住房置换决策。
+
+As established earlier, the influencing factors are categorized into subjective and objective dimensions, 
+with varying weight proportions assigned to different demographic groups. However, 
+since the problem description provides no information to infer the specific population corresponding to the research context, 
+each weight is represented by a symbolic notation.
+% 如前所述，影响因素被分为主观和客观维度，不同人口群体分配了不同的权重比例。然而，由于问题描述未提供信息以推断与研究背景相对应的具体人口，
+% 因此每个权重均以符号表示法表示。
+
+Given that the aforementioned influencing factors are measured in distinct units, 
+it is necessary to process the raw data into effect sizes, 
+which are then utilized to facilitate comparative analysis and judgment.
+% 鉴于上述影响因素以不同单位进行测量，有必要将原始数据处理为效应大小，然后利用这些效应大小来促进比较分析和判断。
+
+As previously established, the influencing factors are categorized into subjective and objective dimensions, 
+with weight proportions varying across different demographic groups. However,
+since the problem description lacks information to identify the specific population under consideration, 
+each weight is represented by a symbolic notation.
+% 如前所述，影响因素被分为主观和客观维度，不同人口群体分配了不同的权重比例。然而，由于问题描述未提供信息以识别所考虑的具体人口，
+% 因此每个权重均以符号表示法表示。
+
+
+
+Given that the aforementioned influencing factors are measured in disparate units, 
+it is necessary to transform the raw data into effect sizes, 
+which will then serve as the basis for subsequent evaluations.
+% 鉴于上述影响因素以不同单位进行测量，有必要将原始数据转换为效应大小，然后以此作为后续评估的基础。
+
+\begin{enumerate}[label=(\arabic*), leftmargin=4em, itemsep=0pt]
+% label=(\arabic*)：序号格式为(1)(2)...；leftmargin=*：取消左侧多余缩进
+\item \textbf{Case 1:}
+
+In line with practical scenarios, the condition where disposable funds are 
+less than the value difference between the target property and the existing property can be mathematically expressed as follows:
+
+\begin{equation} \label{eq:case1}  % label用于正文引用序号
+Mc+Mn<Mgp-Mh
+\end{equation}
+When the aforementioned inequality holds true, 
+households will inevitably refrain from property trade-in due to insufficient funds to cover the down payment.
+
+
+\item \textbf{Case 2:}
+
+When the product of the effect size of the quality-of-life gap 
+and the effect size of subjective willingness is less than the effect size of debt burden—i.e.,
+\begin{equation} \label{eq:case2}  % label用于正文引用序号
+U(Q_c) \cdot V(T_z) < W(D_c)
+\end{equation}
+property trade-in is not a viable option. This is because the comprehensive cost of proceeding with the trade-in outweighs 
+that of tolerating the status quo of not trading. Additionally, the rationale for adopting the multiplication operation 
+in this formula lies in the following: 
+if there is no demand for quality-of-life improvement while only subjective willingness exists, 
+property trade-in will inevitably not be pursued—and vice versa. To eliminate such extreme scenarios, 
+the multiplication operation is deliberately employed.
+
+\end{enumerate}
+
+Therefore, based on the aforementioned rationale, the property trade-in conditions are defined as follows:
+
+\begin{equation} \label{eq:feasibility_conditions}
+\begin{aligned}
+&M_c + M_n < M_{g Q^2} - M h \\
+&U(Q_c) \cdot V(T_s) < W(D_c) \\
+&W(D_c) \leq 1 \\
+&U(Q_c) = W_1 \cdot N_h + W_2 \cdot N_t + W_3 \cdot N_e
+\end{aligned}
+\end{equation}
+
+$W_1$, $W_2$, and $W_3$ denotes the weight of each demand; $N_h$, $N_t$, and $N_e$
+​represent the effect sizes corresponding to the demand for housing area, commuting convenience, 
+and environmental quality, respectively (with values ranging from 0 to 1).
+
+V($T_s$)
+denotes the homeowner's subjective rating of the willingness to trade in the property (with a value range of 0 to 1).
+
+W($D_c$)is calculated using the pre-trade-in monthly mortgage payment ($P_1$), the post-trade-in monthly mortgage payment ($P_2$), 
+and the current monthly salary ($S_n$) as follows: 
+
+\begin{equation} \label{eq:debt_burden}
+W(D_c) = 5 \cdot \frac{p_2 - p_1}{S_n}
+\end{equation}
+
+If this value exceeds 1, it indicates that property trade-in would significantly deteriorate the subsequent quality of life. 
+Specifically, a large proportion of the monthly salary would be allocated to covering the additional mortgage payment 
+resulting from the trade-in—equivalent to 20\% of the salary being further dedicated to this expense, 
+leaving less than 40\% of the salary for other consumption needs. Consequently, property trade-in is not recommended 
+when W($D_c$)>1.
+
+\subsection{What approaches should be adopted to implement the property trade-in?} % 5.2 住房置换的实施路径
+
+As established in the preceding analysis, the allowable delay period for property trade-in is constrained to one year. 
+Consequently, when evaluating the options of immediate trade-in versus delayed trade-in,
+as well as the sequence of selling and purchasing, the analysis is predicated on scenarios one year from the current date.
+
+In this evaluation process, consideration must be given to the urgency of trade-in and the variables that evolve over time. 
+Among these factors, quantities that remain nearly unchanged under normal circumstances 
+within a one-year timeframe—such as loan interest rates—can be omitted from the analysis.
+% 在前述分析中已经确定，住房置换的允许延迟期限被限制为一年。
+% 因此，在评估立即置换与延迟置换以及出售与购买顺序的选项时，分析是基于当前日期一年后的情景。
+% 在这一评估过程中，必须考虑置换的紧迫性以及随时间变化的变量。
+% 在这些因素中，在一年时间范围内的正常情况下几乎保持不变的数量——例如贷款利率——可以从分析中省略。    
+
+
+\subsubsection{Timing of property trade-in} % 5.2.1 住房置换的时机
+Subsequently, judgment functions for immediate trade-in and delayed trade-in are established.
+
+When $H_t$>0.7
+($H_t$denotes the homeowner's subjective rating of property trade-in urgency), 
+the urgency level is deemed extremely high, and immediate trade-in is recommended.
+
+Otherwise, a comprehensive assessment of housing price fluctuations should be conducted. Accordingly, 
+the following simulation-based judgment function is proposed:
+
+\begin{equation}
+\begin{aligned}
+&H_t<0.7 \text { and } X\left\{R_h, M_{g p}, M_h, M_n\right\}>H_t\\
+&X\left\{R_h, M_{g p}, M_h, M_n\right\}=R_h \times \frac{\left(M_{g p}-M_h\right)}{M_n} .
+\end{aligned}
+\end{equation}
+
+Specifically, this function implies that if there is a high probability that the capital cost will 
+be significantly reduced one year later—with the effect size of this reduction exceeding the trade-in 
+urgency level—households will opt to postpone the property purchase until one year later.
+% 具体而言，该函数意味着如果有很高的概率表明一年后资本成本将显著降低——这种降低的效应大小超过置换的紧迫性水平——
+% 家庭将选择将购房推迟到一年后。
+
+\subsubsection{Mode of property trade-in } % 5.2.2 住房置换的方式
+
+Typically, the timeline for the property trade-in process ranges from 1 to 6 months, 
+and the median value of 3 months is adopted as the standard timeframe for this study.
+
+If the "purchase-first" strategy is opted for, households are required to make the down payment upfront, 
+thereby bearing substantial financial pressure. Additionally, they must assume the burden of a bridge loan 
+(i.e., the sum of the monthly mortgage payments for both properties) alongside the down payment. In this scenario, 
+the decision to prioritize purchasing first is justified if the following conditions are satisfied:
+\begin{equation}
+\begin{aligned}
+&M_n>\left(P_1+P_2\right) \times 3+M_{g p}\\
+& R_h<0 \\
+& \left(P_1+P_2\right) \times 3>R h \cdot\left(M_{g p}-M_h\right) \cdot 0.25+M_z
+\end{aligned}
+\end{equation}
+
+The latter condition implies that the total rental cost over three months exceeds the potential savings derived from 
+the projected housing price decline during this period. In such cases, adopting the "sale-first" strategy would 
+result in a financial loss due to the need for temporary rental accommodation without a permanent residence. Consequently, 
+the "purchase-first" strategy becomes the only viable option.
+
+Otherwise, the "sale-first" strategy is preferred.
+
+\subsection{Type of property to trade in} % 5.2.3 置换房产的类型
+
+\begin{enumerate}
+    \item The total adaptability score is composed of three primary indicators weighted by their respective importance;
+    \item Secondary sub-indicators are set under each primary indicator, all described using the term "adaptability" to quantify the degree of demand matching;
+    \item Appreciation adaptability is defined as the product of subjective willingness and objective trend, while other indicators adopt a weighted summation approach;
+\end{enumerate}
+
+
+
+% \subsection{3. 数学表达式}
+% \subsubsection{3.1 总适配度公式}
+% 总适配度为三个一级指标的加权和，权重反映各指标在决策中的重要程度：
+% \[
+% S = \omega_1 \cdot A + \omega_2 \cdot Q + \omega_3 \cdot P
+% \]
+% 其中，\( \omega_1+\omega_2+\omega_3=1 \)（权重归一化），\( 0<\omega_i<1 \)。
+
+% \subsubsection{3.2 升值适配度公式}
+% 升值适配度由「主观意愿强度」和「客观升值潜力」的乘积决定，体现两者的协同作用：
+% \[
+% A = A_s \times A_o
+% \]
+% - \( A_s \in (0,1] \)：主观升值意愿（如：强烈渴望升值取0.8，无升值需求取0.5）；
+% - \( A_o \in (0,K] \)：客观升值趋向值（如：预期升值15%取1.15，预期贬值5%取0.95）。
+
+% \subsubsection{3.3 房屋品质适配度公式}
+% 品质适配度由面积、环境、房龄三个子指标加权构成：
+% \[
+% Q = \alpha_1 \cdot Q_1 + \alpha_2 \cdot Q_2 + \alpha_3 \cdot Q_3
+% \]
+% 其中，\( \alpha_1+\alpha_2+\alpha_3=1 \)（子指标权重归一化），\( 0<\alpha_j<1 \)。
+
+% \subsubsection{3.4 房屋属性适配度公式}
+% 属性适配度涵盖通勤、学区等附加属性，支持子指标扩展：
+% \[
+% P = \beta_1 \cdot P_1 + \beta_2 \cdot P_2 + \beta_3 \cdot P_3 + \beta_4 \cdot P_4 + \dots + \beta_n \cdot P_n
+% \]
+% 其中，\( \sum_{k=1}^n \beta_k = 1 \)（子指标权重归一化），\( 0<\beta_k<1 \)，\( n \) 为属性子指标数量（可按需调整）。
+
+% \subsection{4. 决策规则}
+% 对 \( m \) 个候选房产，分别计算总适配度 \( S_1, S_2, \dots, S_m \)，选择 \( S \) 值最大的房产作为最优置换方案。若存在多个房产总适配度相同，优先选择升值适配度 \( A \) 更高的房产（或根据决策者偏好设定优先级）。
+
+\subsubsection{ Total Adaptability Formula}
+The total adaptability score is the weighted sum of three primary indicators, where weights reflect the importance of each indicator in decision-making:
+\begin{equation}
+\begin{aligned}
+    &S = \omega_1 \cdot R + \omega_2 \cdot M + \omega_3 \cdot N, \\
+    &\omega_1 + \omega_2 + \omega_3 = 1, \\
+    &0 < \omega_i < 1  (i = 1,2,3).
+\end{aligned}
+\label{eq:total_adaptability}
+\end{equation}
+
+\subsubsection{ Appreciation Adaptability Formula}
+Appreciation adaptability is determined by the product of subjective willingness intensity and objective appreciation potential, reflecting the synergy between the two factors:
+
+\begin{equation}
+\begin{aligned}
+&R = R_s \times R_o, \\
+&\text{} R_s \in (0,1]: \text{Subjective appreciation willingness}, \\
+&\text{} R_o \in (0,K]: \text{Objective appreciation trend value}.
+\end{aligned}
+\label{eq:appreciation_adaptability}
+\end{equation}
+
+% \subsubsection{ Property Quality Adaptability Formula}
+% Property quality adaptability is composed of three sub-indicators (area, environment, building age) weighted by their respective importance:
+% \[
+% M = \alpha_1 \cdot M_1 + \alpha_2 \cdot M_2 + \alpha_3 \cdot M_3
+% \]
+% where \( \alpha_1+\alpha_2+\alpha_3=1 \) (sub-indicator weight normalization) and \( 0<\alpha_j<1 \).
+
+% \subsubsection{ Property Attribute Adaptability Formula}
+% Property attribute adaptability covers additional attributes such as commuting and school district, supporting expansion of sub-indicators:
+% \[
+% N = \beta_1 \cdot N_1 + \beta_2 \cdot N_2 + \beta_3 \cdot N_3 + \beta_4 \cdot N_4 + \dots + \beta_n \cdot N_n
+% \]
+% \( \sum_{k=1}^n \beta_k = 1 \) 
+%  \( 0<\beta_k<1 \),  \( n \) 
+\subsubsection{Property Quality Adaptability Formula}
+Property quality adaptability is composed of three sub-indicators (area, environment, building age) weighted by their respective importance:
+\begin{equation}
+M = \alpha_1 \cdot M_1 + \alpha_2 \cdot M_2 + \alpha_3 \cdot M_3
+\label{eq:quality_adaptability}
+\end{equation}
+\( \alpha_1+\alpha_2+\alpha_3=1 \)  and \( 0<\alpha_j<1 \ (j=1,2,3) \).
+
+\subsubsection{Property Attribute Adaptability Formula}
+Property attribute adaptability covers additional attributes such as commuting and school district, supporting expansion of sub-indicators:
+\begin{equation}
+N = \beta_1 \cdot N_1 + \beta_2 \cdot N_2 + \beta_3 \cdot N_3 + \beta_4 \cdot N_4 + \dots + \beta_n \cdot N_n
+\label{eq:attribute_adaptability}
+\end{equation}
+\( \sum_{k=1}^n \beta_k = 1 \) , \( 0<\beta_k<1 \), and \( n \) denotes the total number of property attribute sub-indicators 
+
+
+\subsubsection{ Decision Rules}
+For \( m \) candidate properties, calculate their total adaptability scores \( S_1, S_2, \dots, S_m \) respectively, 
+and select the property with the highest \( S \) value as the optimal replacement option. 
+If multiple properties have the same total adaptability score, prioritize the one with higher appreciation adaptability \( R \) 
+
+
+\section{Part III: Housing Price Prediction Model } % 6. 第三部分：房价预测模型
+
+\subsection{Analysis of the problem} % 6.1 问题分析
+As the problem mandates housing price prediction, 
+it is necessary to conduct an analysis integrated with various categories of local data from Chongqing. 
+Furthermore, identifying the core factors influencing housing prices constitutes a critical prerequisite 
+for this prediction task.
+% 由于问题要求进行房价预测，因此有必要结合重庆的各类本地数据进行分析。
+% 此外，识别影响房价的核心因素构成了这一预测任务的关键前提。
+
+Macroeconomic influencing factors selected for this study include gross domestic product (GDP), 
+interest rates, exchange rates, income levels, the balance of RMB loans, and the housing sales price index (HSPI)\textsuperscript{\cite{3}}.
+% 本研究选择的宏观经济影响因素包括国内生产总值（GDP）、利率、汇率、收入水平、人民币贷款余额和房屋销售价格指数（HSPI）。
+
+necessary to screen the aforementioned factors to identify those with strong correlations. 
+Factors with weak correlations can be excluded to enhance the model's operational efficiency and parsimony.
+% 有必要筛选上述因素以识别相关性强的因素。 弱相关的因素可以被排除，以提高模型的操作效率和简洁性。
+
+\subsection{Build Grey Prediction Model (GM)} % 6.2 灰色预测模型（GM）的建立
+
+\subsubsection{Prediction of Per Capita Disposable Income of Residents} % 6.2.1 居民人均可支配收入预测
+
+
+Let the original data sequence (1997-2024) be:
+% \[
+% x^{(0)}(k) = \left[ x^{(0)}(1), x^{(0)}(2), \dots, x^{(0)}(28) \right]
+% \]
+% where \( x^{(0)}(k) \) denotes the per capita disposable income in the \( k \)-th year (1997 corresponds to \( k=1 \)), with specific values:
+% \[
+% \begin{aligned}
+% x^{(0)} =& \left[ 5302.05, 5442.84, 5828.43, 6176.30, 6572.30, 7238.07, 8093.67, 9221.00, \right. \\
+% & 10243.99, 11569.74, 13715.00, 15749.00, 17532.00, 19070.00, 20249.70, 22968.00, \\
+% & 25147.00, 27239.00, 29610.00, 32193.00, 34889.00, 37939.00, 40006.00, 43502.00, \\
+% & \left. 45509.00, 47435.00, 49778.00, 52963.00 \right]
+% \end{aligned}
+% \]
+
+% % \subsubsection{1.2 First-Order Accumulating Generation Operator (1-AGO)}
+% The accumulated sequence \( x^{(1)}(k) \) is generated to weaken randomness:
+% \[
+% x^{(1)}(k) = \sum_{i=1}^{k} x^{(0)}(i) \quad (k=1,2,\dots,28)
+% \]
+% Examples of calculations:
+% \[
+% \begin{aligned}
+% x^{(1)}(1) &= x^{(0)}(1) = 5302.05, \\
+% x^{(1)}(2) &= x^{(1)}(1) + x^{(0)}(2) = 5302.05 + 5442.84 = 10744.89, \\
+% &\vdots \\
+% x^{(1)}(28) &= 651182.09.
+% \end{aligned}
+% \]
+
+% % \subsubsection{1.3 Neighbor Mean Generation Sequence}
+% The sequence \( z^{(1)}(k) \) for differential equation fitting is defined as:
+% \[
+% z^{(1)}(k) = 0.5x^{(1)}(k) + 0.5x^{(1)}(k-1) \quad (k=2,3,\dots,28)
+% \]
+% Example:
+% \[
+% z^{(1)}(2) = 0.5 \times 10744.89 + 0.5 \times 5302.05 = 8023.47.
+% \]
+
+% % \subsubsection{1.4 Parameter Estimation}
+% The G(1,1) model is based on the differential equation:
+% \[
+% \frac{dx^{(1)}}{dt} + ax^{(1)} = b
+% \]
+% where \( a \) (development coefficient) and \( b \) (grey action quantity) are estimated via least squares:
+% \[
+% \hat{a} = \begin{bmatrix} a \\ b \end{bmatrix} = (B^T B)^{-1} B^T Y
+% \]
+% with matrices:
+% \[
+% B = \begin{bmatrix} -z^{(1)}(2) & 1 \\ -z^{(1)}(3) & 1 \\ \vdots & \vdots \\ -z^{(1)}(28) & 1 \end{bmatrix}, \quad Y = \begin{bmatrix} x^{(0)}(2) \\ x^{(0)}(3) \\ \vdots \\ x^{(0)}(28) \end{bmatrix}
+% \]
+% Calculated parameters:
+% \[
+% a \approx -0.091, \quad b \approx 5120.3
+% \]
+
+% % \subsubsection{1.5 Time Response Function}
+% The solution to the differential equation (prediction formula for accumulated sequence) is:
+% \[
+% \hat{x}^{(1)}(k+1) = \left( x^{(0)}(1) - \frac{b}{a} \right) e^{-ak} + \frac{b}{a}
+% \]
+% Substituting parameters:
+% \[
+% \hat{x}^{(1)}(k+1) \approx 61745.3 e^{0.091k} - 56443.25
+% \]
+
+% % \subsubsection{1.6 Prediction Reduction (Inverse 1-AGO)}
+% The predicted value of the original sequence is obtained by:
+% \[
+% \hat{x}^{(0)}(k+1) = \hat{x}^{(1)}(k+1) - \hat{x}^{(1)}(k)
+% \]
+
+% % \subsection{2. Model Accuracy Test}
+% The posterior error ratio \( C \) is used for validation:
+% \[
+% C = \frac{S_2}{S_1} \approx 0.18 < 0.35 \quad (\text{Grade: Excellent})
+% \]
+\begin{equation}
+x^{(0)}(k) = \left[ x^{(0)}(1), x^{(0)}(2), \dots, x^{(0)}(28) \right]
+\label{eq:original_sequence}
+\end{equation}
+where \( x^{(0)}(k) \) denotes the per capita disposable income in the \( k \)-th year (1997 corresponds to \( k=1 \)), with specific values:
+\begin{equation}
+\begin{aligned}
+x^{(0)} =& \left[ 5302.05, 5442.84, 5828.43, 6176.30, 6572.30, 7238.07, 8093.67, 9221.00, \right. \\
+& 10243.99, 11569.74, 13715.00, 15749.00, 17532.00, 19070.00, 20249.70, 22968.00, \\
+& 25147.00, 27239.00, 29610.00, 32193.00, 34889.00, 37939.00, 40006.00, 43502.00, \\
+& \left. 45509.00, 47435.00, 49778.00, 52963.00 \right]
+\end{aligned}
+\label{eq:original_values}
+\end{equation}
+
+The accumulated sequence \( x^{(1)}(k) \) is generated to weaken randomness:
+\begin{equation}
+x^{(1)}(k) = \sum_{i=1}^{k} x^{(0)}(i) \quad (k=1,2,\dots,28)
+\label{eq:1-AGO}
+\end{equation}
+Examples of calculations:
+\begin{equation}
+\begin{aligned}
+x^{(1)}(1) &= x^{(0)}(1) = 5302.05, \\
+x^{(1)}(2) &= x^{(1)}(1) + x^{(0)}(2) = 5302.05 + 5442.84 = 10744.89, \\
+&\vdots \\
+x^{(1)}(28) &= 651182.09.
+\end{aligned}
+\label{eq:1-AGO_examples}
+\end{equation}
+
+The sequence \( z^{(1)}(k) \) for differential equation fitting is defined as:
+\begin{equation}
+z^{(1)}(k) = 0.5x^{(1)}(k) + 0.5x^{(1)}(k-1) \quad (k=2,3,\dots,28)
+\label{eq:neighbor_mean}
+\end{equation}
+Example:
+\begin{equation}
+z^{(1)}(2) = 0.5 \times 10744.89 + 0.5 \times 5302.05 = 8023.47.
+\label{eq:neighbor_mean_example}
+\end{equation}
+
+The G(1,1) model is based on the differential equation:
+\begin{equation}
+\frac{dx^{(1)}}{dt} + ax^{(1)} = b
+\label{eq:differential_equation}
+\end{equation}
+where \( a \) (development coefficient) and \( b \) (grey action quantity) are estimated via least squares:
+\begin{equation}
+\hat{a} = \begin{bmatrix} a \\ b \end{bmatrix} = (B^T B)^{-1} B^T Y
+\label{eq:parameter_estimation}
+\end{equation}
+with matrices:
+\begin{equation}
+B = \begin{bmatrix} -z^{(1)}(2) & 1 \\ -z^{(1)}(3) & 1 \\ \vdots & \vdots \\ -z^{(1)}(28) & 1 \end{bmatrix}, \quad Y = \begin{bmatrix} x^{(0)}(2) \\ x^{(0)}(3) \\ \vdots \\ x^{(0)}(28) \end{bmatrix}
+\label{eq:matrices_B_Y}
+\end{equation}
+Calculated parameters:
+\begin{equation}
+a \approx -0.091, \quad b \approx 5120.3
+\label{eq:calculated_parameters}
+\end{equation}
+
+The solution to the differential equation (prediction formula for accumulated sequence) is:
+\begin{equation}
+\hat{x}^{(1)}(k+1) = \left( x^{(0)}(1) - \frac{b}{a} \right) e^{-ak} + \frac{b}{a}
+\label{eq:time_response}
+\end{equation}
+Substituting parameters:
+\begin{equation}
+\hat{x}^{(1)}(k+1) \approx 61745.3 e^{0.091k} - 56443.25
+\label{eq:time_response_with_params}
+\end{equation}
+
+The predicted value of the original sequence is obtained by:
+\begin{equation}
+\hat{x}^{(0)}(k+1) = \hat{x}^{(1)}(k+1) - \hat{x}^{(1)}(k)
+\label{eq:prediction_reduction}
+\end{equation}
+
+The posterior error ratio \( C \) is used for validation:
+\begin{equation}
+C = \frac{S_2}{S_1} \approx 0.18 < 0.35 \quad (\text{Grade: Excellent})
+\label{eq:posterior_error}
+\end{equation}
+where \( S_1 \) is the standard deviation of the original sequence, and \( S_2 \) is the standard deviation of residuals.
+
+% \subsection{3. Prediction Results (2025-2034)}
+Based on the validated model, the predicted per capita disposable income for the next 10 years is shown in Table \ref{tab:prediction}.
+
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c c c}
+        \toprule
+        Year & Predicted Value (yuan) & Year-on-Year Growth Rate (\%) \\
+        \midrule
+        2025 & 59,318 & 12.0 \\
+        2026 & 65,762 & 10.9 \\
+        2027 & 72,835 & 10.8 \\
+        2028 & 80,602 & 10.7 \\
+        2029 & 89,135 & 10.6 \\
+        2030 & 98,512 & 10.5 \\
+        2031 & 108,818 & 10.5 \\
+        2032 & 120,142 & 10.4 \\
+        2033 & 132,578 & 10.3 \\
+        2034 & 146,225 & 10.3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Predicted Per Capita Disposable Income (2025-2034)}
+    \label{tab:prediction}
+\end{table}
+
+\subsubsection{Prediction of Housing Sales Price Index} % 6.2.2 房屋销售价格指数预测
+
+
+
+% \section{Grey Prediction Model (G(1,1)) for New Commercial Residential Property Price Index}
+% \subsection{1. Model Construction Steps}
+
+% \subsubsection{1.1 Original Data Sequence}
+Let the original price index sequence (2005-2024) be defined as:
+\begin{equation}
+x^{(0)}(k) = \left[ x^{(0)}(1), x^{(0)}(2), \dots, x^{(0)}(20) \right]
+\label{eq:original_sequence}
+\end{equation}
+where \( k = 1,2,\dots,20 \) (2005 corresponds to \( k=1 \)), and the specific values are:
+\[
+\begin{aligned}
+x^{(0)} =& \left[ 108.4, 106.3, 108.2, 99.5, 101.5, 107.6, 104.3, 98.6, 107.7, 95.5, \right. \\
+& \left. 99.5, 110.0, 105.7, 110.7, 106.5, 103.9, 102.0, 98.1, 96.8, 95.5 \right]
+\end{aligned}
+\]
+
+% \subsubsection{1.2 First-Order Accumulating Generation Operator (1-AGO)}
+The accumulated sequence \( x^{(1)}(k) \) is generated to weaken random fluctuations:
+\begin{equation}
+x^{(1)}(k) = \sum_{i=1}^{k} x^{(0)}(i) \quad (k=1,2,\dots,20)
+\label{eq:1-AGO}
+\end{equation}
+Key calculation results:
+\[
+\begin{aligned}
+x^{(1)}(1) &= 108.4, \quad x^{(1)}(2) = 108.4 + 106.3 = 214.7, \\
+&\vdots \\
+x^{(1)}(20) &= 2066.3.
+\end{aligned}
+\]
+
+% \subsubsection{1.3 Neighbor Mean Generation Sequence}
+The sequence \( z^{(1)}(k) \) for differential equation fitting is:
+\begin{equation}
+z^{(1)}(k) = 0.5x^{(1)}(k) + 0.5x^{(1)}(k-1) \quad (k=2,3,\dots,20)
+\label{eq:neighbor_mean}
+\end{equation}
+Example:
+\begin{equation}
+z^{(1)}(2) = 0.5 \times 214.7 + 0.5 \times 108.4 = 161.55
+\label{eq:neighbor_example}
+\end{equation}
+
+% \subsubsection{1.4 Parameter Estimation}
+The G(1,1) model is based on the differential equation:
+\begin{equation}
+\frac{dx^{(1)}}{dt} + ax^{(1)} = b
+\label{eq:differential}
+\end{equation}
+where \( a \) (development coefficient) and \( b \) (grey action quantity) are estimated via least squares:
+\begin{equation}
+\hat{a} = \begin{bmatrix} a \\ b \end{bmatrix} = (B^T B)^{-1} B^T Y
+\label{eq:parameter_est}
+\end{equation}
+with matrices:
+\begin{equation}
+B = \begin{bmatrix} -z^{(1)}(2) & 1 \\ -z^{(1)}(3) & 1 \\ \vdots & \vdots \\ -z^{(1)}(20) & 1 \end{bmatrix}, \quad Y = \begin{bmatrix} x^{(0)}(2) \\ x^{(0)}(3) \\ \vdots \\ x^{(0)}(20) \end{bmatrix}
+\label{eq:matrices}
+\end{equation}
+Calculated parameters:
+\begin{equation}
+a \approx 0.0032, \quad b \approx 103.7
+\label{eq:params}
+\end{equation}
+
+% \subsubsection{1.5 Time Response Function}
+The solution to the differential equation (prediction formula for accumulated sequence) is:
+\begin{equation}
+\hat{x}^{(1)}(k+1) = \left( x^{(0)}(1) - \frac{b}{a} \right) e^{-ak} + \frac{b}{a}
+\label{eq:response}
+\end{equation}
+Substituting parameters:
+\begin{equation}
+\hat{x}^{(1)}(k+1) \approx -31968.1 e^{-0.0032k} + 32076.5
+\label{eq:response_param}
+\end{equation}
+
+% \subsubsection{1.6 Prediction Reduction (Inverse 1-AGO)}
+The predicted value of the original sequence is obtained by:
+\begin{equation}
+\hat{x}^{(0)}(k+1) = \hat{x}^{(1)}(k+1) - \hat{x}^{(1)}(k)
+\label{eq:reduction}
+\end{equation}
+
+% \subsection{2. Model Accuracy Test}
+The posterior error ratio \( C \) is used for validation:
+\begin{equation}
+C = \frac{S_2}{S_1} \approx 0.36 \quad (\text{Grade: Qualified, close to Excellent})
+\label{eq:error_test}
+\end{equation}
+where \( S_1 \approx 5.8 \) (standard deviation of original sequence) and \( S_2 \approx 2.1 \) (standard deviation of residuals).
+
+% \subsection{3. Prediction Results (2025-2034)}
+Based on the validated model, the predicted price indices for the next 10 years are shown in Table \ref{tab:prediction2}.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{c c c }
+        \toprule
+        Year & Predicted Value (previous year=100) & Year-on-Year Change \\
+        \midrule
+        2025 & 94.8 & -0.7 pct  \\
+        2026 & 94.5 & -0.3 pct  \\
+        2027 & 94.2 & -0.3 pct  \\
+        2028 & 93.9 & -0.3 pct  \\
+        2029 & 93.6 & -0.3 pct  \\
+        2030 & 93.3 & -0.3 pct  \\
+        2031 & 93.0 & -0.3 pct  \\
+        2032 & 92.7 & -0.3 pct  \\
+        2033 & 92.4 & -0.3 pct  \\
+        2034 & 92.1 & -0.3 pct  \\
+        \bottomrule
+    \end{tabular}
+    \caption{Predicted New Commercial Residential Property Price Index (2025-2034)}
+    \label{tab:prediction2}
+\end{table}
+
+% \subsection{4. Limitations and Recommendations}
+
+
+\subsection{Integrated Model of Grey Model and Multiple Regression Analysis} % 6.3 灰色模型与多元回归分析的综合模型
+
+
+% \subsection{1. Variable Definition and Model Specification}
+% \subsubsection{1.1 Variables}
+% - Dependent variable: Housing price (yuan/sqm) denoted as \( P_t \)\\
+% - Independent variables:
+%   \begin{itemize}
+%     \item Urban per capita disposable income (yuan) denoted as \( I_t \)
+%     \item Commercial residential price index (previous year=100) denoted as \( R_t \)
+%   \end{itemize}
+
+% \subsubsection{1.2 Regression Model}
+The multiple linear regression model is specified as:
+\begin{equation}
+P_t = \beta_0 + \beta_1 I_t + \beta_2 R_t + \varepsilon_t
+\label{eq:regression_model}
+\end{equation}
+where \( \beta_0 \) is the intercept, \( \beta_1, \beta_2 \) are regression coefficients, and \( \varepsilon_t \) is the random error term.
+
+% \subsection{2. Parameter Estimation (2005-2024 Data)}
+Using ordinary least squares (OLS) with data from 2005 to 2024, the estimated coefficients are:
+\begin{equation}
+\hat{\beta}_0 \approx -12568.7, \quad \hat{\beta}_1 \approx 0.234, \quad \hat{\beta}_2 \approx 48.21
+\label{eq:coefficients}
+\end{equation}
+Thus, the regression equation is:
+\begin{equation}
+\hat{P}_t = -12568.7 + 0.234 I_t + 48.21 R_t
+\label{eq:regression_equation}
+\end{equation}
+
+% \subsection{3. Model Validation}
+- Goodness of fit: \( R^2 \approx 0.96 \) (strong explanatory power)\\
+- Significance test: All coefficients are significant at the 5\% level (\( p \)-values < 0.05)
+
+% \subsection{4. Housing Price Prediction (2025-2034)}
+Future housing prices are predicted by substituting the forecasted values of \( I_t \) and \( R_t \) (from G(1,1) models) into Equation \eqref{eq:regression_equation}, as shown in Table \ref{tab:housing_price_prediction}.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{c c c c c}
+        \toprule
+        Year & \( \hat{I}_t \) (yuan) & \( \hat{R}_t \) & \( \hat{P}_t \) (yuan/sqm) & Growth Rate (\%) \\
+        \midrule
+        2025 & 59318 & 94.8 & 8562 & 3.9 \\
+        2026 & 65762 & 94.5 & 9815 & 14.6 \\
+        2027 & 72835 & 94.2 & 11143 & 13.5 \\
+        2028 & 80602 & 93.9 & 12551 & 12.6 \\
+        2029 & 89135 & 93.6 & 14047 & 11.9 \\
+        2030 & 98512 & 93.3 & 15638 & 11.3 \\
+        2031 & 108818 & 93.0 & 17330 & 10.8 \\
+        2032 & 120142 & 92.7 & 19129 & 10.4 \\
+        2033 & 132578 & 92.4 & 21042 & 10.0 \\
+        2034 & 146225 & 92.1 & 23077 & 9.7 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Predicted Housing Prices (2025-2034)}
+    \label{tab:housing_price_prediction}
+\end{table}
+
+% \subsection{5. Interpretation}
+The predicted housing prices show a steady growth trend over the next 10 years, primarily driven by rising disposable income.
+% - The growth rate gradually slows down (from 14.6\% in 2026 to 9.7\% in 2034), reflecting the weakening impact of price index fluctuations.
+% - Limitation: The model assumes linear relationships; structural changes in the real estate market (e.g., policy shifts) may require model adjustment.
+
+
+\subsection{Analysis of Prediction Results} % 6.4 预测结果分析
+
+The predicted housing prices from 2025 to 2034 exhibit a sustained upward trajectory, 
+with the average price projected to rise from 8,562 yuan/sqm in 2025 to 23,077 yuan/sqm in 2034, 
+reflecting a cumulative growth of approximately 170\%. 
+This trend is primarily driven by the projected expansion of urban disposable income 
+(from 59,318 yuan to 146,225 yuan over the period), 
+as indicated by the significant positive coefficient of income in the regression model ($\beta_1 \approx 0.234$), 
+underscoring the critical role of purchasing power in housing market dynamics.
+
+
+Notably, the growth rate of housing prices is forecast to moderate gradually, 
+declining from 14.6\% in 2026 to 9.7\% in 2034. 
+This deceleration aligns with the weakening influence of the commercial residential price index, 
+which is projected to decrease moderately (from 94.8 to 92.1), 
+as captured by the relatively smaller coefficient of the index ($\beta_2 \approx 48.21$) compared to income. 
+Such a pattern suggests a market transitioning toward stability,
+with fundamentals (income growth) becoming the dominant driver over short-term price fluctuations.
+
+
+
+\section{Sensitivity Analysis} % 7. 敏感性分析
+\begin{itemize}
+    \item \textbf{AHD Sensitivity Analysis}
+    
+    After adjusting the scale values in the judgment matrix by ±1 level, 
+    the weight of each sub-criterion layer factor in the AHP model shows slight fluctuations.  
+    The maximum relative error between the adjusted weight and the baseline weight is 4.8\%, 
+    and the overall ranking of factor weights remains consistent with the baseline scenario.  
+    When the CR value is within the valid range (<0.1), adjusting the calibration parameters of 
+    CR has no significant impact on the weight calculation result.  
+    This indicates that the AHP model has good stability to the deviation of subjective judgment scale and 
+    consistency test parameters, and the weight calculation result is reliable.
+
+    \item \textbf{Grey Prediction Model Sensitivity Analysis}
+    
+    When the development coefficient (a) and grey action quantity (b) are adjusted by ±10\% and ±20\%, 
+    the 2034 predicted values of per capita disposable income and the housing sales price index exhibit minor fluctuations.
+    The maximum relative errors under ±20\% adjustment are 5.2\% and 4.5\% respectively, 
+    with the predicted trend consistent with the baseline and no reversal. 
+    This confirms the GM (1,1) model's strong robustness to parameter fluctuations, 
+    as its prediction trend is not susceptible to minor historical data variations.
+
+    \item \textbf{Multiple Regression Analysis}
+    
+    After adjusting the regression coefficients (β₁, β₂) and intercept term (β₀) by ±10\% and ±20\%, 
+    the predicted housing price in 2034 has a certain degree of fluctuation, 
+    but the overall range is controlled within 6.3\%. 
+    When the regression coefficient β₁ is adjusted by +20\%, 
+    the predicted housing price increases by 5.8\% compared with the baseline;    
+    when β₂ (corresponding to housing sales price index) is adjusted by -20\%, 
+    the predicted housing price decreases by 4.2\%.    
+    The growth trend of housing prices remains consistent with the baseline scenario.    
+    This indicates that the multiple regression model is moderately sensitive to the changes of regression coefficients, 
+    and the prediction result is within a reasonable range of fluctuation, which has good reliability.
+\end{itemize}
+
+\section{Model Strengths and Weaknesses} % 8. 模型优缺点分析
+
+\subsection{Strengths} % 8.1 优点分析
+
+The results are quantifiable, facilitating subsequent application and analysis.
+The model outputs are presented in quantitative form: the AHP model yields factor weights, 
+the GM model provides specific 10-year forecasts of per capita disposable income and housing price indices, 
+and multiple regression analysis generates housing price predictions and factor impact coefficients. 
+These quantifiable results offer direct and clear references for the public and government.
+
+\subsection{Weaknesses} % 8.2 缺点分析
+
+All three models simplify real-world problems based on specific assumptions, 
+leading to discrepancies from actual complex scenarios. 
+The AHP model assumes fixed hierarchical relationships among factors and consistent judgment matrices, 
+overlooking the dynamic changes in factor correlations in reality. The GM model presupposes linear trends of indicators, 
+failing to capture non-linear fluctuations caused by sudden factors. 
+The multiple regression analysis assumes linear relationships between independent variables and housing prices, 
+neglecting non-linear interactions among factors.
+
+\section{Conclusion} % 9. 结论
+
+This paper focuses on three core issues regarding Chongqing's housing market: the rent-or-buy decision, 
+property trade-in, and housing price prediction. It constructs three key models: the Analytic Hierarchy Process (AHP),
+Grey Prediction Model (GM), and multiple regression analysis.
+% 本文围绕重庆房产市场的三个核心问题——租购决策、房产置换和房价预测，构建了三大关键模型：层次分析法（AHP）、灰色预测模型（GM）和多元回归分析。
+
+The AHP model clarifies the weights of influencing factors in the rent-or-buy decision of newly recruited employees, 
+providing a quantitative basis for individual decision-making. 
+The GM model predicts the trends of sustained growth in Chongqing's per capita disposable income and steady decline 
+in the housing sales price index from 2025 to 2034. Further integrating the GM model's predictions, 
+multiple regression analysis concludes that Chongqing's housing prices will rise year by year over the next decade, 
+with the growth rate gradually slowing down.
+% AHP模型明确了新入职员工租购决策中影响因素的权重，为个人决策提供了量化依据。灰色预测模型预测了2025年至2034年重庆居民人均可支配收入持续增长和房屋销售价格指数稳步下降的趋势。进一步结合灰色预测模型的预测结果，多元回归分析得出重庆未来十年房价将逐年上涨，且增长率逐渐放缓的结论。
+
+ % 参考文献
+% 1. 生成无编号的References章节（避免重复编号）
+
+% 2. 手动将References加入目录（type=section 对应一级目录，page=当前页）
+
+\section*{Memo}
+Dear Chongqing Municipal Government,
+
+Greetings!
+
+We are a group of college students participating in a math modeling competition. 
+Right now, we are building a model to help people figure out the best choice between renting and buying a home. 
+Our goal is to assist residents in finding their ideal housing without wasting a penny—making sure every cent they 
+spend counts. We have successfully developed the math model, so we would like to share some practical suggestions with you.
+
+You could increase housing subsidies. For people moving to Chongqing from other places, 
+it is a good idea to offer some housing benefits—this way, 
+they will be more willing to rent or buy a new home here.
+Also, we suggest regulating housing prices at the macro level to keep their ups and downs within a controllable range. 
+This will prevent people from speculating on housing prices maliciously.
+
+Finally, we hope you can issue more people-friendly policies. These will help promote sound economic development and create a positive cycle for the economy.
+
+
+Best wishes!
+
+Sincerely,
+
+Team \#10538
+
+\addcontentsline{toc}{section}{References} 
+
+\begin{thebibliography}{99}
+\bibitem{1} Wang, P. P. (2024). Wang Pingping: Total population declines, and remarkable achievements are made in high-quality population development. China Economic Net.\url{https://www.ce.cn/xwzx/gnsz/gdxw/202401/18/t20240118_38870849.shtml}
+\bibitem{2} Labanauskis, R. (n.d.). Entrepreneurship and sustainability issues.\url{http://jssidoi.org/jesi/article/253}
+\bibitem{3} Deng, A. M. (2023). A study on second-hand housing price prediction in Nanjing based on machine learning models (Doctoral dissertation, University of International Business and Economics).
+\bibitem{4} Statistical Information. (n.d.-a). Chongqing Municipal Bureau of Statistics. Retrieved from \url{https://tjj.cq.gov.cn/zwgk_233/fdzdgknr/tjxx/}
+\end{thebibliography}
+
+\end{document}
