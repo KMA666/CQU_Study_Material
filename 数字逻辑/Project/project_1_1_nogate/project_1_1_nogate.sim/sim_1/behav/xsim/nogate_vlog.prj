@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1_1_nogate.srcs/sources_1/new/nogate.v" \
+"../../../../project_1_1_nogate.srcs/sim_1/new/nogate_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

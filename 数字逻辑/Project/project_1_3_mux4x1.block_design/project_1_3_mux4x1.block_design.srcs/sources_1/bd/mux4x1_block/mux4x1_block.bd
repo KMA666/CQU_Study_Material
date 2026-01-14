@@ -1,0 +1,271 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x35D0CA1835D0CA18",
+      "device": "xc7a35tcpg236-1",
+      "name": "mux4x1_block",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "notgate_2_0": "",
+      "andgate_0": "",
+      "andgate_1": "",
+      "andgate_2": "",
+      "andgate_3": "",
+      "orgate_0": "",
+      "orgate_1": "",
+      "andgate_4": "",
+      "andgate_5": "",
+      "andgate_6": "",
+      "andgate_7": "",
+      "andgate_8": "",
+      "andgate_9": "",
+      "andgate_10": "",
+      "andgate_11": "",
+      "orgate_2": ""
+    },
+    "ports": {
+      "s1": {
+        "direction": "I"
+      },
+      "s0": {
+        "direction": "I"
+      },
+      "a": {
+        "direction": "I"
+      },
+      "b": {
+        "direction": "I"
+      },
+      "c": {
+        "direction": "I"
+      },
+      "d": {
+        "direction": "I"
+      },
+      "F": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "notgate_2_0": {
+        "vlnv": "xilinx.com:user:notgate_2:1.0",
+        "xci_name": "mux4x1_block_notgate_2_0_0"
+      },
+      "andgate_0": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_0_0"
+      },
+      "andgate_1": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_1_0"
+      },
+      "andgate_2": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_2_0"
+      },
+      "andgate_3": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_3_0"
+      },
+      "orgate_0": {
+        "vlnv": "xilinx.com:user:orgate:1.0",
+        "xci_name": "mux4x1_block_orgate_0_0"
+      },
+      "orgate_1": {
+        "vlnv": "xilinx.com:user:orgate:1.0",
+        "xci_name": "mux4x1_block_orgate_1_0"
+      },
+      "andgate_4": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_4_0"
+      },
+      "andgate_5": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_5_0"
+      },
+      "andgate_6": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_6_0"
+      },
+      "andgate_7": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_7_0"
+      },
+      "andgate_8": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_8_0"
+      },
+      "andgate_9": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_9_0"
+      },
+      "andgate_10": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_10_0"
+      },
+      "andgate_11": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux4x1_block_andgate_11_0"
+      },
+      "orgate_2": {
+        "vlnv": "xilinx.com:user:orgate:1.0",
+        "xci_name": "mux4x1_block_orgate_2_0"
+      }
+    },
+    "nets": {
+      "s1_1": {
+        "ports": [
+          "s1",
+          "notgate_2_0/in1",
+          "andgate_6/a",
+          "andgate_9/b"
+        ]
+      },
+      "a_1": {
+        "ports": [
+          "a",
+          "andgate_2/a",
+          "andgate_4/a"
+        ]
+      },
+      "notgate_2_0_out1": {
+        "ports": [
+          "notgate_2_0/out1",
+          "andgate_2/b",
+          "andgate_3/a"
+        ]
+      },
+      "notgate_2_0_out2": {
+        "ports": [
+          "notgate_2_0/out2",
+          "andgate_4/b",
+          "andgate_7/a"
+        ]
+      },
+      "andgate_2_c": {
+        "ports": [
+          "andgate_2/c",
+          "andgate_5/a"
+        ]
+      },
+      "andgate_4_c": {
+        "ports": [
+          "andgate_4/c",
+          "andgate_5/b"
+        ]
+      },
+      "b_1": {
+        "ports": [
+          "b",
+          "andgate_3/b",
+          "andgate_1/b"
+        ]
+      },
+      "s0_1": {
+        "ports": [
+          "s0",
+          "notgate_2_0/in2",
+          "andgate_1/a",
+          "andgate_10/a"
+        ]
+      },
+      "andgate_1_c": {
+        "ports": [
+          "andgate_1/c",
+          "andgate_0/a"
+        ]
+      },
+      "andgate_3_c": {
+        "ports": [
+          "andgate_3/c",
+          "andgate_0/b"
+        ]
+      },
+      "c_1": {
+        "ports": [
+          "c",
+          "andgate_7/b",
+          "andgate_6/b"
+        ]
+      },
+      "andgate_6_c": {
+        "ports": [
+          "andgate_6/c",
+          "andgate_8/a"
+        ]
+      },
+      "andgate_7_c": {
+        "ports": [
+          "andgate_7/c",
+          "andgate_8/b"
+        ]
+      },
+      "d_1": {
+        "ports": [
+          "d",
+          "andgate_9/a",
+          "andgate_10/b"
+        ]
+      },
+      "andgate_9_c": {
+        "ports": [
+          "andgate_9/c",
+          "andgate_11/a"
+        ]
+      },
+      "andgate_10_c": {
+        "ports": [
+          "andgate_10/c",
+          "andgate_11/b"
+        ]
+      },
+      "andgate_11_c": {
+        "ports": [
+          "andgate_11/c",
+          "orgate_0/a"
+        ]
+      },
+      "andgate_5_c": {
+        "ports": [
+          "andgate_5/c",
+          "orgate_0/b"
+        ]
+      },
+      "andgate_8_c": {
+        "ports": [
+          "andgate_8/c",
+          "orgate_1/a"
+        ]
+      },
+      "andgate_0_c": {
+        "ports": [
+          "andgate_0/c",
+          "orgate_1/b"
+        ]
+      },
+      "orgate_0_c": {
+        "ports": [
+          "orgate_0/c",
+          "orgate_2/a"
+        ]
+      },
+      "orgate_1_c": {
+        "ports": [
+          "orgate_1/c",
+          "orgate_2/b"
+        ]
+      },
+      "orgate_2_c": {
+        "ports": [
+          "orgate_2/c",
+          "F"
+        ]
+      }
+    }
+  }
+}

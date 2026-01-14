@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="mux2x1_1_andgate_0_0_synth_1" LaunchDir="C:/Users/yanha/Desktop/Vivado project/project_1_2_mux2x1/project_1_2_mux2x1.runs/mux2x1_1_andgate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mux2x1_1_andgate_1_0_synth_1" LaunchDir="C:/Users/yanha/Desktop/Vivado project/project_1_2_mux2x1/project_1_2_mux2x1.runs/mux2x1_1_andgate_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="mux2x1_1_andgate_0_0_synth_1"/>
+	</Run>
+	<Run Id="mux2x1_1_orgate_0_0_synth_1" LaunchDir="C:/Users/yanha/Desktop/Vivado project/project_1_2_mux2x1/project_1_2_mux2x1.runs/mux2x1_1_orgate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mux2x1_1_notgate_0_0_synth_1" LaunchDir="C:/Users/yanha/Desktop/Vivado project/project_1_2_mux2x1/project_1_2_mux2x1.runs/mux2x1_1_notgate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/yanha/Desktop/Vivado project/project_1_2_mux2x1/project_1_2_mux2x1.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="mux2x1_1_andgate_0_0_synth_1"/>
+		<Parent Id="mux2x1_1_andgate_1_0_synth_1"/>
+		<Parent Id="mux2x1_1_orgate_0_0_synth_1"/>
+		<Parent Id="mux2x1_1_notgate_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

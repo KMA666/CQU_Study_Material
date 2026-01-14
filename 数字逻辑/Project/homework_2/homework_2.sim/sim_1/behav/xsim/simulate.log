@@ -1,0 +1,10 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+time=0 | sw=xxxx | AN=1110 seg=xx led=00000000000000xx
+time=20000 | sw=0010 | AN=1110 seg=79 led=0000000000000000
+time=40000 | sw=8010 | AN=1110 seg=0e led=0000000000000000
+time=60000 | sw=0005 | AN=1110 seg=12 led=0000000000000000
+time=80000 | sw=8005 | AN=1110 seg=12 led=0000000000000001
+time=100000 | sw=000f | AN=1110 seg=0e led=0000000000000000
+time=120000 | sw=80f0 | AN=1110 seg=79 led=0000000000000000
+$finish called at time : 140 ns : File "D:/vivado/files/homework_2/homework_2.srcs/sim_1/new/tp_addsub32.v" Line 42

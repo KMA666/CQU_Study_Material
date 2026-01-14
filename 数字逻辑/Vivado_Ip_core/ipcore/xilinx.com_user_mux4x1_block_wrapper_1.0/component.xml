@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>mux4x1_block_wrapper</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>mux4x1_block_wrapper</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_orgate_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_andgate_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_user_notgate_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>mux4x1_block_wrapper</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_orgate_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_andgate_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_notgate_2_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>archive_project</spirit:name>
+        <spirit:displayName>Miscellaneous</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>archive_project_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>ab3bb8f2</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>F</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>c</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>d</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/constrs_1/new/mux4x1_block_de_xdc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_0_0/mux4x1_block_orgate_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_5_0/mux4x1_block_andgate_5_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_8_0/mux4x1_block_andgate_8_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_7_0/mux4x1_block_andgate_7_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_notgate_2_0_0/mux4x1_block_notgate_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_notgate_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_2_0/mux4x1_block_andgate_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_1_0/mux4x1_block_andgate_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_1_0/mux4x1_block_orgate_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_0_0/mux4x1_block_andgate_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_3_0/mux4x1_block_andgate_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_4_0/mux4x1_block_andgate_4_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_6_0/mux4x1_block_andgate_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_9_0/mux4x1_block_andgate_9_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_9</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_2_0/mux4x1_block_orgate_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_10_0/mux4x1_block_andgate_10_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_10</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_11_0/mux4x1_block_andgate_11_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_11</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/synth/mux4x1_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/mux4x1_block_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_mux4x1_block</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/hdl/mux4x1_block_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_user_orgate_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="orgate" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_user_andgate_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="andgate" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_user_notgate_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="notgate_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_0_0/mux4x1_block_orgate_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_5_0/mux4x1_block_andgate_5_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_5</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_8_0/mux4x1_block_andgate_8_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_8</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_7_0/mux4x1_block_andgate_7_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_7</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_notgate_2_0_0/mux4x1_block_notgate_2_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_notgate_2_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_2_0/mux4x1_block_andgate_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_1_0/mux4x1_block_andgate_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_1_0/mux4x1_block_orgate_1_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_1</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_0_0/mux4x1_block_andgate_0_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_0</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_3_0/mux4x1_block_andgate_3_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_3</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_4_0/mux4x1_block_andgate_4_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_4</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_6_0/mux4x1_block_andgate_6_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_6</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_9_0/mux4x1_block_andgate_9_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_9</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_orgate_2_0/mux4x1_block_orgate_2_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_orgate_2</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_10_0/mux4x1_block_andgate_10_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_10</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/ip/mux4x1_block_andgate_11_0/mux4x1_block_andgate_11_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_andgate_11</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/sim/mux4x1_block.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/sim/mux4x1_block.protoinst</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../../../../../Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs/sources_1/bd/mux4x1_block/hdl/mux4x1_block_wrapper.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_orgate_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="orgate" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_andgate_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="andgate" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_user_notgate_2_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="user" xilinx:name="notgate_2" xilinx:version="1.0">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/mux4x1_block_wrapper_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>archive_project_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ip_project_archive.zip</spirit:name>
+        <spirit:userFileType>zip</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>mux4x1_block_wrapper_v1_0</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">mux4x1_block_wrapper_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>mux4x1_block_wrapper_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-13T14:57:37Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@180395cd_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba8aa54_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22375c52_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a7e9ed_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc2675a_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0f2b89_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56dc2142_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@790ce9ee_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e32522b_ARCHIVE_LOCATION">c:/users/yanha/desktop/vivado project/project_1_3_mux4x1.block_design/project_1_3_mux4x1.block_design.srcs</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9be74ce9"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="b939e148"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="49650216"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

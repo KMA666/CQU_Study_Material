@@ -1,0 +1,1094 @@
+$date
+   Sat Oct 25 18:28:44 2025
+$end
+$version
+  2019.1
+$end
+$timescale
+  1ps
+$end
+$scope module tb_top32 $end
+$var reg 1 ! clk $end
+$var reg 1 " btn_center_n $end
+$var reg 16 # sw [15:0] $end
+$var reg 4 $ btn [3:0] $end
+$var wire 16 % led [15:0] $end
+$var wire 7 & seg [6:0] $end
+$var wire 1 ' seg_dp $end
+$var wire 4 ( an [3:0] $end
+$scope module uut $end
+$var wire 1 ) clk $end
+$var wire 1 * btn_center_n $end
+$var wire 16 + sw [15:0] $end
+$var wire 4 , btn [3:0] $end
+$var wire 16 % led [15:0] $end
+$var wire 7 & seg [6:0] $end
+$var wire 1 ' seg_dp $end
+$var wire 4 ( an [3:0] $end
+$var wire 1 - rstn $end
+$var wire 32 . A [31:0] $end
+$var wire 32 / B [31:0] $end
+$var wire 1 0 sub $end
+$var wire 32 1 res32 [31:0] $end
+$var wire 1 2 cout32 $end
+$var wire 1 3 ovf32 $end
+$var wire 4 4 d3 [3:0] $end
+$var wire 4 5 d2 [3:0] $end
+$var wire 4 6 d1 [3:0] $end
+$var wire 4 7 d0 [3:0] $end
+$scope module u32 $end
+$var wire 32 . a [31:0] $end
+$var wire 32 / b [31:0] $end
+$var wire 1 0 sub $end
+$var wire 32 1 result [31:0] $end
+$var wire 1 2 carry_out $end
+$var wire 1 3 overflow $end
+$var wire 32 8 b_xor [31:0] $end
+$var wire 32 9 carry [31:0] $end
+$var parameter 32 : WIDTH [31:0] $end
+$scope module gen_fa[0].genblk1.fa $end
+$var wire 1 ; a $end
+$var wire 1 < b $end
+$var wire 1 0 cin $end
+$var wire 1 = sum $end
+$var wire 1 > cout $end
+$var wire 1 ? ab_xor $end
+$upscope $end
+$scope module gen_fa[1].genblk1.fa $end
+$var wire 1 @ a $end
+$var wire 1 A b $end
+$var wire 1 > cin $end
+$var wire 1 B sum $end
+$var wire 1 C cout $end
+$var wire 1 D ab_xor $end
+$upscope $end
+$scope module gen_fa[2].genblk1.fa $end
+$var wire 1 E a $end
+$var wire 1 F b $end
+$var wire 1 C cin $end
+$var wire 1 G sum $end
+$var wire 1 H cout $end
+$var wire 1 I ab_xor $end
+$upscope $end
+$scope module gen_fa[3].genblk1.fa $end
+$var wire 1 J a $end
+$var wire 1 K b $end
+$var wire 1 H cin $end
+$var wire 1 L sum $end
+$var wire 1 M cout $end
+$var wire 1 N ab_xor $end
+$upscope $end
+$scope module gen_fa[4].genblk1.fa $end
+$var wire 1 O a $end
+$var wire 1 P b $end
+$var wire 1 M cin $end
+$var wire 1 Q sum $end
+$var wire 1 R cout $end
+$var wire 1 S ab_xor $end
+$upscope $end
+$scope module gen_fa[5].genblk1.fa $end
+$var wire 1 T a $end
+$var wire 1 U b $end
+$var wire 1 R cin $end
+$var wire 1 V sum $end
+$var wire 1 W cout $end
+$var wire 1 X ab_xor $end
+$upscope $end
+$scope module gen_fa[6].genblk1.fa $end
+$var wire 1 Y a $end
+$var wire 1 Z b $end
+$var wire 1 W cin $end
+$var wire 1 [ sum $end
+$var wire 1 \ cout $end
+$var wire 1 ] ab_xor $end
+$upscope $end
+$scope module gen_fa[7].genblk1.fa $end
+$var wire 1 ^ a $end
+$var wire 1 _ b $end
+$var wire 1 \ cin $end
+$var wire 1 ` sum $end
+$var wire 1 a cout $end
+$var wire 1 b ab_xor $end
+$upscope $end
+$scope module gen_fa[8].genblk1.fa $end
+$var wire 1 c a $end
+$var wire 1 d b $end
+$var wire 1 a cin $end
+$var wire 1 e sum $end
+$var wire 1 f cout $end
+$var wire 1 g ab_xor $end
+$upscope $end
+$scope module gen_fa[9].genblk1.fa $end
+$var wire 1 h a $end
+$var wire 1 i b $end
+$var wire 1 f cin $end
+$var wire 1 j sum $end
+$var wire 1 k cout $end
+$var wire 1 l ab_xor $end
+$upscope $end
+$scope module gen_fa[10].genblk1.fa $end
+$var wire 1 m a $end
+$var wire 1 n b $end
+$var wire 1 k cin $end
+$var wire 1 o sum $end
+$var wire 1 p cout $end
+$var wire 1 q ab_xor $end
+$upscope $end
+$scope module gen_fa[11].genblk1.fa $end
+$var wire 1 r a $end
+$var wire 1 s b $end
+$var wire 1 p cin $end
+$var wire 1 t sum $end
+$var wire 1 u cout $end
+$var wire 1 v ab_xor $end
+$upscope $end
+$scope module gen_fa[12].genblk1.fa $end
+$var wire 1 w a $end
+$var wire 1 x b $end
+$var wire 1 u cin $end
+$var wire 1 y sum $end
+$var wire 1 z cout $end
+$var wire 1 { ab_xor $end
+$upscope $end
+$scope module gen_fa[13].genblk1.fa $end
+$var wire 1 | a $end
+$var wire 1 } b $end
+$var wire 1 z cin $end
+$var wire 1 ~ sum $end
+$var wire 1 !! cout $end
+$var wire 1 "! ab_xor $end
+$upscope $end
+$scope module gen_fa[14].genblk1.fa $end
+$var wire 1 #! a $end
+$var wire 1 $! b $end
+$var wire 1 !! cin $end
+$var wire 1 %! sum $end
+$var wire 1 &! cout $end
+$var wire 1 '! ab_xor $end
+$upscope $end
+$scope module gen_fa[15].genblk1.fa $end
+$var wire 1 (! a $end
+$var wire 1 )! b $end
+$var wire 1 &! cin $end
+$var wire 1 *! sum $end
+$var wire 1 +! cout $end
+$var wire 1 ,! ab_xor $end
+$upscope $end
+$scope module gen_fa[16].genblk1.fa $end
+$var wire 1 -! a $end
+$var wire 1 .! b $end
+$var wire 1 +! cin $end
+$var wire 1 /! sum $end
+$var wire 1 0! cout $end
+$var wire 1 1! ab_xor $end
+$upscope $end
+$scope module gen_fa[17].genblk1.fa $end
+$var wire 1 2! a $end
+$var wire 1 3! b $end
+$var wire 1 0! cin $end
+$var wire 1 4! sum $end
+$var wire 1 5! cout $end
+$var wire 1 6! ab_xor $end
+$upscope $end
+$scope module gen_fa[18].genblk1.fa $end
+$var wire 1 7! a $end
+$var wire 1 8! b $end
+$var wire 1 5! cin $end
+$var wire 1 9! sum $end
+$var wire 1 :! cout $end
+$var wire 1 ;! ab_xor $end
+$upscope $end
+$scope module gen_fa[19].genblk1.fa $end
+$var wire 1 <! a $end
+$var wire 1 =! b $end
+$var wire 1 :! cin $end
+$var wire 1 >! sum $end
+$var wire 1 ?! cout $end
+$var wire 1 @! ab_xor $end
+$upscope $end
+$scope module gen_fa[20].genblk1.fa $end
+$var wire 1 A! a $end
+$var wire 1 B! b $end
+$var wire 1 ?! cin $end
+$var wire 1 C! sum $end
+$var wire 1 D! cout $end
+$var wire 1 E! ab_xor $end
+$upscope $end
+$scope module gen_fa[21].genblk1.fa $end
+$var wire 1 F! a $end
+$var wire 1 G! b $end
+$var wire 1 D! cin $end
+$var wire 1 H! sum $end
+$var wire 1 I! cout $end
+$var wire 1 J! ab_xor $end
+$upscope $end
+$scope module gen_fa[22].genblk1.fa $end
+$var wire 1 K! a $end
+$var wire 1 L! b $end
+$var wire 1 I! cin $end
+$var wire 1 M! sum $end
+$var wire 1 N! cout $end
+$var wire 1 O! ab_xor $end
+$upscope $end
+$scope module gen_fa[23].genblk1.fa $end
+$var wire 1 P! a $end
+$var wire 1 Q! b $end
+$var wire 1 N! cin $end
+$var wire 1 R! sum $end
+$var wire 1 S! cout $end
+$var wire 1 T! ab_xor $end
+$upscope $end
+$scope module gen_fa[24].genblk1.fa $end
+$var wire 1 U! a $end
+$var wire 1 V! b $end
+$var wire 1 S! cin $end
+$var wire 1 W! sum $end
+$var wire 1 X! cout $end
+$var wire 1 Y! ab_xor $end
+$upscope $end
+$scope module gen_fa[25].genblk1.fa $end
+$var wire 1 Z! a $end
+$var wire 1 [! b $end
+$var wire 1 X! cin $end
+$var wire 1 \! sum $end
+$var wire 1 ]! cout $end
+$var wire 1 ^! ab_xor $end
+$upscope $end
+$scope module gen_fa[26].genblk1.fa $end
+$var wire 1 _! a $end
+$var wire 1 `! b $end
+$var wire 1 ]! cin $end
+$var wire 1 a! sum $end
+$var wire 1 b! cout $end
+$var wire 1 c! ab_xor $end
+$upscope $end
+$scope module gen_fa[27].genblk1.fa $end
+$var wire 1 d! a $end
+$var wire 1 e! b $end
+$var wire 1 b! cin $end
+$var wire 1 f! sum $end
+$var wire 1 g! cout $end
+$var wire 1 h! ab_xor $end
+$upscope $end
+$scope module gen_fa[28].genblk1.fa $end
+$var wire 1 i! a $end
+$var wire 1 j! b $end
+$var wire 1 g! cin $end
+$var wire 1 k! sum $end
+$var wire 1 l! cout $end
+$var wire 1 m! ab_xor $end
+$upscope $end
+$scope module gen_fa[29].genblk1.fa $end
+$var wire 1 n! a $end
+$var wire 1 o! b $end
+$var wire 1 l! cin $end
+$var wire 1 p! sum $end
+$var wire 1 q! cout $end
+$var wire 1 r! ab_xor $end
+$upscope $end
+$scope module gen_fa[30].genblk1.fa $end
+$var wire 1 s! a $end
+$var wire 1 t! b $end
+$var wire 1 q! cin $end
+$var wire 1 u! sum $end
+$var wire 1 v! cout $end
+$var wire 1 w! ab_xor $end
+$upscope $end
+$scope module gen_fa[31].genblk1.fa $end
+$var wire 1 x! a $end
+$var wire 1 y! b $end
+$var wire 1 v! cin $end
+$var wire 1 z! sum $end
+$var wire 1 {! cout $end
+$var wire 1 |! ab_xor $end
+$upscope $end
+$upscope $end
+$scope module display $end
+$var wire 1 ) clk $end
+$var wire 1 - rstn $end
+$var wire 4 4 d3 [3:0] $end
+$var wire 4 5 d2 [3:0] $end
+$var wire 4 6 d1 [3:0] $end
+$var wire 4 7 d0 [3:0] $end
+$var wire 7 & seg [6:0] $end
+$var reg 4 }! an [3:0] $end
+$var reg 1 ~! seg_dp $end
+$var reg 18 !" clkdiv [17:0] $end
+$var wire 2 "" sel [1:0] $end
+$var reg 4 #" cur_hex [3:0] $end
+$var wire 7 $" seg_inner [6:0] $end
+$scope module hexdec $end
+$var wire 4 %" x [3:0] $end
+$var reg 7 &" seg [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0!!
+bx !"
+0"
+0"!
+bx ""
+b0 #
+0#!
+b0 #"
+b0 $
+0$!
+b1000000 $"
+b0 %
+0%!
+b0 %"
+b1000000 &
+0&!
+b1000000 &"
+1'
+0'!
+b1110 (
+0(!
+0)
+0)!
+0*
+0*!
+b0 +
+0+!
+b0 ,
+0,!
+1-
+0-!
+b0 .
+0.!
+b0 /
+0/!
+00
+00!
+b0 1
+01!
+02
+02!
+03
+03!
+b0 4
+04!
+b0 5
+05!
+b0 6
+06!
+b0 7
+07!
+b0 8
+08!
+b0 9
+09!
+b100000 :
+0:!
+0;
+0;!
+0<
+0<!
+0=
+0=!
+0>
+0>!
+0?
+0?!
+0@
+0@!
+0A
+0A!
+0B
+0B!
+0C
+0C!
+0D
+0D!
+0E
+0E!
+0F
+0F!
+0G
+0G!
+0H
+0H!
+0I
+0I!
+0J
+0J!
+0K
+0K!
+0L
+0L!
+0M
+0M!
+0N
+0N!
+0O
+0O!
+0P
+0P!
+0Q
+0Q!
+0R
+0R!
+0S
+0S!
+0T
+0T!
+0U
+0U!
+0V
+0V!
+0W
+0W!
+0X
+0X!
+0Y
+0Y!
+0Z
+0Z!
+0[
+0[!
+0\
+0\!
+0]
+0]!
+0^
+0^!
+0_
+0_!
+0`
+0`!
+0a
+0a!
+0b
+0b!
+0c
+0c!
+0d
+0d!
+0e
+0e!
+0f
+0f!
+0g
+0g!
+0h
+0h!
+0i
+0i!
+0j
+0j!
+0k
+0k!
+0l
+0l!
+0m
+0m!
+0n
+0n!
+0o
+0o!
+0p
+0p!
+0q
+0q!
+0r
+0r!
+0s
+0s!
+0t
+0t!
+0u
+0u!
+0v
+0v!
+0w
+0w!
+0x
+0x!
+0y
+0y!
+0z
+0z!
+0{
+0{!
+0|
+0|!
+0}
+b1110 }!
+0~
+1~!
+$end
+#5000
+1!
+1)
+#10000
+0!
+0)
+#15000
+1!
+1)
+#20000
+0!
+b0 !"
+1"
+b0 ""
+b1010011 #
+0#!
+b1000 #"
+0$!
+b0 $"
+b1000 %"
+b0 &
+b0 &"
+0(!
+0)
+0)!
+1*
+b1010011 +
+0-
+0-!
+b11 .
+0.!
+b101 /
+b1000 1
+02!
+03!
+b11 4
+b101 5
+b1000 7
+07!
+b101 8
+08!
+b111 9
+1;
+1<
+0<!
+0=
+0=!
+1>
+0?
+1@
+0A
+0A!
+0B
+0B!
+1C
+1D
+0E
+1F
+0F!
+0G
+0G!
+1H
+1I
+0J
+0K
+0K!
+1L
+0L!
+0M
+0O
+0P
+0P!
+0Q!
+0T
+0U
+0U!
+0V!
+0Y
+0Z
+0Z!
+0[!
+0^
+0_
+0_!
+0`!
+0c
+0d
+0d!
+0e!
+0h
+0i
+0i!
+0j!
+0m
+0n
+0n!
+0o!
+0r
+0s
+0s!
+0t!
+0w
+0x
+0x!
+0y!
+0|
+0}
+b1110 }!
+1~!
+#25000
+1!
+1)
+#30000
+0!
+0)
+#35000
+1!
+1)
+#40000
+0!
+b10010111 #
+0#!
+b0 #"
+0$!
+b1000000 $"
+b0 %"
+b1000000 &
+b1000000 &"
+0(!
+0)
+0)!
+b10010111 +
+0-!
+b111 .
+0.!
+b1001 /
+b10000 1
+02!
+03!
+b111 4
+b1001 5
+b0 7
+07!
+b1001 8
+08!
+b1111 9
+1;
+1<
+0<!
+0=!
+1@
+0A
+0A!
+0B!
+1E
+0F
+0F!
+0G
+0G!
+1H
+1I
+0J
+1K
+0K!
+0L
+0L!
+1M
+1N
+0O
+0P
+0P!
+1Q
+0Q!
+0R
+0T
+0U
+0U!
+0V!
+0Y
+0Z
+0Z!
+0[!
+0^
+0_
+0_!
+0`!
+0c
+0d
+0d!
+0e!
+0h
+0i
+0i!
+0j!
+0m
+0n
+0n!
+0o!
+0r
+0s
+0s!
+0t!
+0w
+0x
+0x!
+0y!
+0|
+0}
+b1110 }!
+1~!
+#45000
+1!
+1)
+#50000
+0!
+0)
+#55000
+1!
+1)
+#60000
+0!
+1!!
+1"!
+b1000000000111000 #
+0#!
+b101 #"
+1$!
+b10010 $"
+b1 %
+0%!
+b101 %"
+b10010 &
+1&!
+b10010 &"
+1'!
+0(!
+0)
+1)!
+0*!
+b1000000000111000 +
+1+!
+1,!
+0-!
+b1000 .
+1.!
+b11 /
+0/!
+10
+10!
+b101 1
+11!
+12
+02!
+03
+13!
+b1000 4
+04!
+b11 5
+15!
+16!
+b101 7
+07!
+b11111111111111111111111111111100 8
+18!
+b11111111111111111111111111111000 9
+09!
+1:!
+0;
+1;!
+0<
+0<!
+1=
+1=!
+0>
+0>!
+0?
+1?!
+0@
+1@!
+0A
+0A!
+0B
+1B!
+0C
+0C!
+0D
+1D!
+0E
+1E!
+1F
+0F!
+1G
+1G!
+0H
+0H!
+1I
+1I!
+1J
+1J!
+1K
+0K!
+0L
+1L!
+1M
+0M!
+0N
+1N!
+0O
+1O!
+1P
+0P!
+0Q
+1Q!
+1R
+0R!
+1S
+1S!
+0T
+1T!
+1U
+0U!
+0V
+1V!
+1W
+0W!
+1X
+1X!
+0Y
+1Y!
+1Z
+0Z!
+0[
+1[!
+1\
+0\!
+1]
+1]!
+0^
+1^!
+1_
+0_!
+0`
+1`!
+1a
+0a!
+1b
+1b!
+0c
+1c!
+1d
+0d!
+0e
+1e!
+1f
+0f!
+1g
+1g!
+0h
+1h!
+1i
+0i!
+0j
+1j!
+1k
+0k!
+1l
+1l!
+0m
+1m!
+1n
+0n!
+0o
+1o!
+1p
+0p!
+1q
+1q!
+0r
+1r!
+1s
+0s!
+0t
+1t!
+1u
+0u!
+1v
+1v!
+0w
+1w!
+1x
+0x!
+0y
+1y!
+1z
+0z!
+1{
+1{!
+0|
+1|!
+1}
+b1110 }!
+0~
+1~!
+#65000
+1!
+1)
+#70000
+0!
+0)
+#75000
+1!
+1)
+#80000
+0!
+0!!
+b1000000000010000 #
+0#!
+b1111 #"
+1$!
+b1110 $"
+b0 %
+1%!
+b1111 %"
+b1110 &
+0&!
+b1110 &"
+0(!
+0)
+1)!
+1*!
+b1000000000010000 +
+0+!
+0-!
+b0 .
+1.!
+b1 /
+1/!
+00!
+b11111111111111111111111111111111 1
+02
+02!
+03
+13!
+b0 4
+14!
+b1 5
+05!
+b1111 7
+07!
+b11111111111111111111111111111110 8
+18!
+b0 9
+19!
+0:!
+0;
+0<
+0<!
+1=!
+1>!
+0?!
+0@
+1A
+0A!
+1B
+1B!
+0C
+1C!
+1D
+0D!
+0E
+1F
+0F!
+1G!
+1H!
+0I!
+0J
+1K
+0K!
+1L
+1L!
+0M
+1M!
+1N
+0N!
+0O
+1P
+0P!
+1Q
+1Q!
+0R
+1R!
+0S!
+0T
+1U
+0U!
+1V
+1V!
+0W
+1W!
+0X!
+0Y
+1Z
+0Z!
+1[
+1[!
+0\
+1\!
+0]!
+0^
+1_
+0_!
+1`
+1`!
+0a
+1a!
+0b!
+0c
+1d
+0d!
+1e
+1e!
+0f
+1f!
+0g!
+0h
+1i
+0i!
+1j
+1j!
+0k
+1k!
+0l!
+0m
+1n
+0n!
+1o
+1o!
+0p
+1p!
+0q!
+0r
+1s
+0s!
+1t
+1t!
+0u
+1u!
+0v!
+0w
+1x
+0x!
+1y
+1y!
+0z
+1z!
+0{!
+0|
+1}
+b1110 }!
+1~
+1~!
+#85000
+1!
+1)
+#90000
+0!
+0)
+#95000
+1!
+1)

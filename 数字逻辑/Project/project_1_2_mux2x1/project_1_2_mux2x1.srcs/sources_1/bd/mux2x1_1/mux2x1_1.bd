@@ -1,0 +1,97 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x174EE786174EE786",
+      "device": "xc7a35tcpg236-1",
+      "name": "mux2x1_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "andgate_0": "",
+      "andgate_1": "",
+      "orgate_0": "",
+      "notgate_0": ""
+    },
+    "ports": {
+      "s": {
+        "direction": "I"
+      },
+      "b": {
+        "direction": "I"
+      },
+      "f": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "a": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "andgate_0": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux2x1_1_andgate_0_0"
+      },
+      "andgate_1": {
+        "vlnv": "xilinx.com:user:andgate:1.0",
+        "xci_name": "mux2x1_1_andgate_1_0"
+      },
+      "orgate_0": {
+        "vlnv": "xilinx.com:user:orgate:1.0",
+        "xci_name": "mux2x1_1_orgate_0_0"
+      },
+      "notgate_0": {
+        "vlnv": "xilinx.com:user:notgate:1.0",
+        "xci_name": "mux2x1_1_notgate_0_0"
+      }
+    },
+    "nets": {
+      "s_1": {
+        "ports": [
+          "s",
+          "notgate_0/a",
+          "andgate_1/a"
+        ]
+      },
+      "b_1": {
+        "ports": [
+          "b",
+          "andgate_1/b"
+        ]
+      },
+      "andgate_1_c": {
+        "ports": [
+          "andgate_1/c",
+          "orgate_0/b"
+        ]
+      },
+      "andgate_0_c": {
+        "ports": [
+          "andgate_0/c",
+          "orgate_0/a"
+        ]
+      },
+      "notgate_0_y": {
+        "ports": [
+          "notgate_0/y",
+          "andgate_0/b"
+        ]
+      },
+      "orgate_0_c": {
+        "ports": [
+          "orgate_0/c",
+          "f"
+        ]
+      },
+      "a_1": {
+        "ports": [
+          "a",
+          "andgate_0/a"
+        ]
+      }
+    }
+  }
+}

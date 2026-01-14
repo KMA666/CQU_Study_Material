@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+Time = 0 ns, in1 = 0, in2 = 0, out1 = 1, out2 = 1
+Time = 10000 ns, in1 = 0, in2 = 1, out1 = 1, out2 = 0
+Time = 20000 ns, in1 = 1, in2 = 0, out1 = 0, out2 = 1
+Time = 30000 ns, in1 = 1, in2 = 1, out1 = 0, out2 = 0
+$finish called at time : 40 ns : File "C:/Users/yanha/Desktop/Vivado project/input_output_ports_2_notgate/input_output_ports_2_notgate.srcs/sim_1/new/notgate_2_sim.v" Line 63

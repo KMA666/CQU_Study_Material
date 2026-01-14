@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../homework_2.srcs/sources_1/new/addsub_param.v" \
+"../../../../homework_2.srcs/sources_1/new/digit_mux.v" \
+"../../../../homework_2.srcs/sources_1/new/full_adder.v" \
+"../../../../homework_2.srcs/sources_1/new/hex7seg.v" \
+"../../../../homework_2.srcs/sources_1/new/top32.v" \
+"../../../../homework_2.srcs/sim_1/new/tp_addsub32.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

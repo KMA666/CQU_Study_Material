@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:{C:/Users/yanha/Desktop/Vivado project/project_1_1_basic gates/project_1_1_basic gates.srcs/constrs_1/new/andgate_xdc.xdc} rfile:{../../../project_1_1_basic gates.srcs/constrs_1/new/andgate_xdc.xdc} id:1} [current_design]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V19 [get_ports {a[0]}]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V17 [get_ports {b[0]}]
+set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U16 [get_ports {c[0]}]

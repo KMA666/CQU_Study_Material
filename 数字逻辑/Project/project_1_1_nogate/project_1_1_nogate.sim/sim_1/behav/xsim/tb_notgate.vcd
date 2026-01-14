@@ -1,0 +1,44 @@
+$date
+   Mon Oct 13 19:12:36 2025
+$end
+$version
+  2018.3
+$end
+$timescale
+  1ps
+$end
+$scope module tb_notgate $end
+$var reg 8 ! a [7:0] $end
+$var wire 8 " y [7:0] $end
+$var parameter 32 # WIDTH [31:0] $end
+$scope module uut $end
+$var wire 8 $ a [7:0] $end
+$var wire 8 " y [7:0] $end
+$var parameter 32 % WIDTH [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b11111111 "
+b1000 #
+b0 $
+b1000 %
+$end
+#10000
+b11111111 !
+b0 "
+b11111111 $
+#20000
+b0 !
+b11111111 "
+b0 $
+#30000
+b10100101 !
+b1011010 "
+b10100101 $
+#40000
+b111100 !
+b11000011 "
+b111100 $

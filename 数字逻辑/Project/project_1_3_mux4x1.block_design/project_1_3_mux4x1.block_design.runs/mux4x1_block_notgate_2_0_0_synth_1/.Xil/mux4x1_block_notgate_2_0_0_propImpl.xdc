@@ -1,0 +1,10 @@
+set_property SRC_FILE_INFO {cfile:{c:/Users/yanha/Desktop/Vivado project/project_1_3_mux4x1.block_design/Users/yanha/Desktop/Vivado project/input_output_ports_2_notgate/input_output_ports_2_notgate.srcs/constrs_1/new/notgate_2_xdc.xdc} rfile:{../../../Users/yanha/Desktop/Vivado project/input_output_ports_2_notgate/input_output_ports_2_notgate.srcs/constrs_1/new/notgate_2_xdc.xdc} id:1 order:EARLY scoped_inst:inst} [current_design]
+current_instance inst
+set_property src_info {type:SCOPED_XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R2 [get_ports in1]
+set_property src_info {type:SCOPED_XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T1 [get_ports in2]
+set_property src_info {type:SCOPED_XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E19 [get_ports out1]
+set_property src_info {type:SCOPED_XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U16 [get_ports out2]

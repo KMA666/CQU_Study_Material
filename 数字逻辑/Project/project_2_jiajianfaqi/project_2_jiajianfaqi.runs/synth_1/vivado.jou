@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Oct 29 19:01:12 2025
+# Process ID: 19636
+# Current directory: C:/Users/yanha/Desktop/Vivado project/project_2_jiajianfaqi/project_2_jiajianfaqi.runs/synth_1
+# Command line: vivado.exe -log top32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top32.tcl
+# Log file: C:/Users/yanha/Desktop/Vivado project/project_2_jiajianfaqi/project_2_jiajianfaqi.runs/synth_1/top32.vds
+# Journal file: C:/Users/yanha/Desktop/Vivado project/project_2_jiajianfaqi/project_2_jiajianfaqi.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top32.tcl -notrace
