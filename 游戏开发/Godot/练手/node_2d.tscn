@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://p3xaj35vctn"]
+
+[ext_resource type="Texture2D" uid="uid://ci8cv8ccr1f8f" path="res://Free Chicken Sprites.png" id="1_5ooi4"]
+[ext_resource type="Texture2D" uid="uid://b3epp4j4wskbu" path="res://Basic Charakter Actions.png" id="2_17n6j"]
+[ext_resource type="Texture2D" uid="uid://ci015k4frfk0n" path="res://Basic Charakter Spritesheet.png" id="3_ac87f"]
+[ext_resource type="Texture2D" uid="uid://biscdjqivpiey" path="res://Egg_And_Nest.png" id="4_ueru6"]
+[ext_resource type="Texture2D" uid="uid://c875dw8vyahtb" path="res://icon.svg" id="5_6g3b3"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(154, -56)
+
+[node name="FreeChickenSprites" type="Sprite2D" parent="."]
+position = Vector2(23, 448)
+scale = Vector2(22.4375, 18.4063)
+texture = ExtResource("1_5ooi4")
+
+[node name="BasicCharakterActions" type="Sprite2D" parent="."]
+position = Vector2(921, 743)
+texture = ExtResource("2_17n6j")
+
+[node name="BasicCharakterSpritesheet" type="Sprite2D" parent="."]
+position = Vector2(334, 976)
+texture = ExtResource("3_ac87f")
+
+[node name="BasicCharakterSpritesheet2" type="Sprite2D" parent="."]
+position = Vector2(557, 1270)
+texture = ExtResource("3_ac87f")
+
+[node name="EggAndNest" type="Sprite2D" parent="."]
+position = Vector2(-104, 2)
+texture = ExtResource("4_ueru6")
+
+[node name="BasicCharakterSpritesheet3" type="Sprite2D" parent="."]
+position = Vector2(1818, 686)
+scale = Vector2(4.73958, 5.78646)
+texture = ExtResource("3_ac87f")
+
+[node name="Control" type="Control" parent="BasicCharakterSpritesheet3"]
+layout_mode = 3
+anchor_left = 0.042
+anchor_right = 1.016
+anchor_bottom = 0.977
+offset_left = -97.7343
+offset_top = -97.1233
+offset_right = -93.7423
+offset_bottom = -95.7073
+
+[node name="Node2D" type="Node2D" parent="BasicCharakterSpritesheet3/Control"]
+position = Vector2(135.217, -18.8651)
+
+[node name="Icon" type="Sprite2D" parent="BasicCharakterSpritesheet3"]
+position = Vector2(-180.818, -121.491)
+scale = Vector2(1.84835, 1.41674)
+texture = ExtResource("5_6g3b3")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(923, 752)
