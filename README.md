@@ -25,3 +25,5 @@ tnnd 被这个搞了好久，终于弄好了。Github上的文件大小不能超
 B站张云翼老哥讲的速成课我个人觉得挺好的，适合期末复习[《线性代数》3小时突击速成课！！！清华张云翼老师主讲](https://www.bilibili.com/video/BV1kW421F7U3/?spm_id_from=333.337.search-card.all.click&vd_source=2d4da08735b60fd1a9e16b2c328e440e) ps.张云翼这个老哥很牛逼，纯大佬来的
 
 # 未完待续
+
+by Aetik
