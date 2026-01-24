@@ -1,0 +1,365 @@
+{
+  "code": 200,
+  "message": "获取成功！",
+  "data": {
+    "list": [
+      {
+        "product_id": 99,
+        "paper_id": 20696,
+        "title": "教材修订记录",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20696,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/9a21649489337.pdf",
+          "pages": 4
+        },
+        "files": [
+          {
+            "paper_id": 20696,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/9a21649489337.pdf",
+            "pages": 4
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20697,
+        "title": "各章节关键词",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20697,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/8c01649489356.pdf",
+          "pages": 1
+        },
+        "files": [
+          {
+            "paper_id": 20697,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/8c01649489356.pdf",
+            "pages": 1
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20698,
+        "title": "导论",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20698,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/8111649489424.pdf",
+          "pages": 1
+        },
+        "files": [
+          {
+            "paper_id": 20698,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/8111649489424.pdf",
+            "pages": 1
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20699,
+        "title": "第一章 毛泽东思想及其地位",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20699,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/4b11649489490.pdf",
+          "pages": 5
+        },
+        "files": [
+          {
+            "paper_id": 20699,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/4b11649489490.pdf",
+            "pages": 5
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20700,
+        "title": "第二章 新民主主义革命理论",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20700,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/9481649489553.pdf",
+          "pages": 5
+        },
+        "files": [
+          {
+            "paper_id": 20700,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/9481649489553.pdf",
+            "pages": 5
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20702,
+        "title": "第三章 社会主义改造理论",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20702,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/3ca1649489661.pdf",
+          "pages": 4
+        },
+        "files": [
+          {
+            "paper_id": 20702,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/3ca1649489661.pdf",
+            "pages": 4
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20703,
+        "title": "第四章 社会主义建设道路初步探索的理论成果",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20703,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5231649489690.pdf",
+          "pages": 4
+        },
+        "files": [
+          {
+            "paper_id": 20703,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5231649489690.pdf",
+            "pages": 4
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20704,
+        "title": "第五章 邓小平理论",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20704,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/aa21649489716.pdf",
+          "pages": 7
+        },
+        "files": [
+          {
+            "paper_id": 20704,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/aa21649489716.pdf",
+            "pages": 7
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20705,
+        "title": "第六章 “三个代表”重要思想",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20705,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/f3c1649489787.pdf",
+          "pages": 5
+        },
+        "files": [
+          {
+            "paper_id": 20705,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/f3c1649489787.pdf",
+            "pages": 5
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20706,
+        "title": "第七章 科学发展观",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20706,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/b211649489815.pdf",
+          "pages": 5
+        },
+        "files": [
+          {
+            "paper_id": 20706,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/b211649489815.pdf",
+            "pages": 5
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20707,
+        "title": "第八章 习近平新时代中国特色社会主义思想及其历史地位",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20707,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/d251649489841.pdf",
+          "pages": 6
+        },
+        "files": [
+          {
+            "paper_id": 20707,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/d251649489841.pdf",
+            "pages": 6
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20708,
+        "title": "第九章 坚持和发展中国特色社会主义的总任务",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20708,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/cc81649489863.pdf",
+          "pages": 5
+        },
+        "files": [
+          {
+            "paper_id": 20708,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/cc81649489863.pdf",
+            "pages": 5
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20709,
+        "title": "第十章 “五位一体”总体布局",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20709,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/fc21649489906.pdf",
+          "pages": 7
+        },
+        "files": [
+          {
+            "paper_id": 20709,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/fc21649489906.pdf",
+            "pages": 7
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20710,
+        "title": "第十一章 “四个全面”战略布局",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20710,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5e31649489928.pdf",
+          "pages": 6
+        },
+        "files": [
+          {
+            "paper_id": 20710,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5e31649489928.pdf",
+            "pages": 6
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20711,
+        "title": "第十二章 实现中华民族伟大复兴的重要保障",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20711,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/59a1649489952.pdf",
+          "pages": 4
+        },
+        "files": [
+          {
+            "paper_id": 20711,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/59a1649489952.pdf",
+            "pages": 4
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20712,
+        "title": "第十三章 中国特色大国外交",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20712,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5e81649490128.pdf",
+          "pages": 3
+        },
+        "files": [
+          {
+            "paper_id": 20712,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/5e81649490128.pdf",
+            "pages": 3
+          }
+        ],
+        "user_answer_status": 1
+      },
+      {
+        "product_id": 99,
+        "paper_id": 20713,
+        "title": "第十四章 坚持和加强党的领导",
+        "paper_type": 1,
+        "goodsfile": {
+          "paper_id": 20713,
+          "file_id": 0,
+          "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/c4b1649490151.pdf",
+          "pages": 3
+        },
+        "files": [
+          {
+            "paper_id": 20713,
+            "file_id": 0,
+            "url": "https:\/\/xuedao.oss-cn-beijing.aliyuncs.com\/2022-04-09\/c4b1649490151.pdf",
+            "pages": 3
+          }
+        ],
+        "user_answer_status": 1
+      }
+    ]
+  }
+}
